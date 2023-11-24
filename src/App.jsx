@@ -1,39 +1,24 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
-import i18n from "./i18n"; // Import your i18n configuration
-import productEn from "./lang/product-en";
-import productId from "./lang/product-id";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
 
 function App() {
-  const { t } = useTranslation();
-
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
-
-  // Get the product data based on the selected language
-  const getProductData = () => {
-    const currentLanguage = i18n.language;
-    return currentLanguage === "en" ? productEn() : productId();
-  };
-
-  const productData = getProductData();
-
   return (
-    <>
-      <button onClick={() => changeLanguage("en")}>English</button>
-      <button onClick={() => changeLanguage("id")}>Indonesia</button>
-      <div>
-        <h1>PRODUK 1</h1>
-        <div>{productData[0].product}</div>
-        <div>{productData[0].description}</div>
-      </div>
-      <div>
-        <h1>PRODUK 2</h1>
-        <div>{productData[1].product}</div>
-        <div>{productData[1].description}</div>
-      </div>
-    </>
+    <BrowserRouter>
+      <header>
+        <nav>
+          <h1>Route</h1>
+          <Link to="/">Home</Link>
+          <NavLink to="products">Product</NavLink>
+        </nav>
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="products" element={<Products />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 
