@@ -24,10 +24,14 @@ function App() {
       <button onClick={() => changeLanguage("en")}>English</button>
       <button onClick={() => changeLanguage("id")}>Indonesia</button>
       <div>
-        {t("product.name")}: {productData[0].product}
+        <h1>PRODUK 1</h1>
+        <div>{productData[0].product}</div>
+        <div>{productData[0].description}</div>
       </div>
       <div>
-        {t("product.description")}: {productData[0].description}
+        <h1>PRODUK 2</h1>
+        <div>{productData[1].product}</div>
+        <div>{productData[1].description}</div>
       </div>
     </>
   );
