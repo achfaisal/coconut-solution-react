@@ -1,31 +1,33 @@
 import React from "react";
-import "./App.css";
+import { useTranslation } from "react-i18next";
+import i18n from "./i18n"; // Import your i18n configuration
+import productEn from "./lang/product-en";
+import productId from "./lang/product-id";
 
 function App() {
+  const { t } = useTranslation();
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
+  // Get the product data based on the selected language
+  const getProductData = () => {
+    const currentLanguage = i18n.language;
+    return currentLanguage === "en" ? productEn() : productId();
+  };
+
+  const productData = getProductData();
+
   return (
     <>
-      <div
-        className="uk-child-width-1-3@m uk-grid-small uk-grid-match"
-        data-uk-grid
-      >
-        <div>
-          <div className="uk-card uk-card-default uk-card-body">
-            <h3 className="uk-card-title">Default</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div>
-          <div className="uk-card uk-card-primary uk-card-body">
-            <h3 className="uk-card-title">Primary</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div>
-          <div className="uk-card uk-card-secondary uk-card-body">
-            <h3 className="uk-card-title">Secondary</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
+      <button onClick={() => changeLanguage("en")}>English</button>
+      <button onClick={() => changeLanguage("id")}>Indonesia</button>
+      <div>
+        {t("product.name")}: {productData[0].product}
+      </div>
+      <div>
+        {t("product.description")}: {productData[0].description}
       </div>
     </>
   );
