@@ -1,28 +1,23 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import i18n from "../i18n"; // Import your i18n configuration
+import i18n from "../i18n";
 import productEn from "../lang/product-en";
 import productId from "../lang/product-id";
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 function Products() {
-  const { t } = useTranslation();
-
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
-
-  // Get the product data based on the selected language
   const getProductData = () => {
     const currentLanguage = i18n.language;
     return currentLanguage === "en" ? productEn() : productId();
   };
 
   const productData = getProductData();
+  useTranslation();
 
   return (
     <>
-      <button onClick={() => changeLanguage("en")}>English</button>
-      <button onClick={() => changeLanguage("id")}>Indonesia</button>
+      <Navbar />
       <div>
         <h1>PRODUK 1</h1>
         <div>{productData[0].product}</div>

@@ -1,0 +1,11 @@
+.about-card {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(182, 216, 255);
+  color: black;
+}
+
+.about-card:hover {
+  background-color: rgb(142, 192, 250);
+  text-decoration: none;
+}
