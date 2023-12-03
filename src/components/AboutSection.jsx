@@ -2,7 +2,7 @@ import React from "react";
 import "../css/AboutUs.css";
 import CardAbout from "./CardAbout";
 
-const AboutUs = ({ aboutTitle, about }) => {
+const AboutSection = ({ aboutTitle, about }) => {
   return (
     <section id="about-us" className="uk-container">
       <div>
@@ -24,4 +24,4 @@ const AboutUs = ({ aboutTitle, about }) => {
   );
 };
 
-export default AboutUs;
+export default AboutSection;

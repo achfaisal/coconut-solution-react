@@ -6,14 +6,10 @@ import homeEn from "../lang/home-en";
 import homeId from "../lang/home-id";
 import Navbar from "../components/Navbar";
 import Gallery from "../components/Gallery";
-import AboutUs from "../components/AboutUs";
-import OurProducts from "../components/OurProducts";
+import AboutSection from "../components/AboutSection";
+import ProductsSection from "../components/ProductsSection";
 
 const Home = () => {
-  // const changeLanguage = (lang) => {
-  //   i18n.changeLanguage(lang);
-  // };
-
   const getHomeData = () => {
     const currentLanguage = i18n.language;
     return currentLanguage === "en" ? homeEn() : homeId();
@@ -26,8 +22,11 @@ const Home = () => {
     <>
       <Navbar />
       <Gallery />
-      <AboutUs aboutTitle={homeData[0].aboutTitle} about={homeData[0].about} />
-      <OurProducts />
+      <AboutSection
+        aboutTitle={homeData[0].aboutTitle}
+        about={homeData[0].about}
+      />
+      <ProductsSection />
     </>
   );
 };
