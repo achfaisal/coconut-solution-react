@@ -1,0 +1,13 @@
+.sticky-navbar {
+  top: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.075) !important;
+}
+
+.navbar-font {
+  text-transform: capitalize !important;
+}
+
+.test-icon {
+  border: none;
+}

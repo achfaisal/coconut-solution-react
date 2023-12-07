@@ -1,6 +1,6 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 import homeEn from "../lang/home-en";
 import homeId from "../lang/home-id";
@@ -18,9 +18,19 @@ const Home = () => {
   const homeData = getHomeData();
   useTranslation();
 
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar
+        navbarHome={homeData[0].navbarHome}
+        navbarAbout={homeData[0].navbarAbout}
+        navbarProduct={homeData[0].navbarProduct}
+        navbarContact={homeData[0].navbarContact}
+        onClickHandler={changeLanguage}
+      />
       <Gallery />
       <AboutSection
         aboutTitle={homeData[0].aboutTitle}

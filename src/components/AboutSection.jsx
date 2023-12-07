@@ -4,7 +4,7 @@ import CardAbout from "./CardAbout";
 
 const AboutSection = ({ aboutTitle, about }) => {
   return (
-    <section id="about-us" className="uk-container">
+    <section id="about-section" className="uk-container">
       <div>
         <h1>{aboutTitle}</h1>
         <p>{about}</p>

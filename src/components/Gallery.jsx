@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   return (
@@ -19,18 +20,18 @@ const Gallery = () => {
             </li>
           </ul>
 
-          <a
+          <Link
             className="uk-position-center-left uk-position-small uk-visible@s"
             href="#"
             data-uk-slidenav-previous
             data-uk-slideshow-item="previous"
-          ></a>
-          <a
+          ></Link>
+          <Link
             className="uk-position-center-right uk-position-small uk-visible@s"
             href="#"
             data-uk-slidenav-next
             data-uk-slideshow-item="next"
-          ></a>
+          ></Link>
         </div>
 
         <ul className="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin uk-hidden@s"></ul>
