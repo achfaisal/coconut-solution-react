@@ -30,3 +30,7 @@ h3 {
 .remove-text__decoration:hover {
   text-decoration: none;
 }
+
+.bg-color {
+  background-color: rgb(240, 240, 240);
+}

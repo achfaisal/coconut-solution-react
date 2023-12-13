@@ -16,6 +16,15 @@ const Navbar = ({
       behavior: "smooth",
     });
   };
+
+  const scrollWithOffset = (el, offset) => {
+    const elementPosition = el.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <nav
@@ -26,7 +35,7 @@ const Navbar = ({
           <div data-uk-navbar>
             <div className="uk-flex-middle uk-navbar-left">
               <a href="#">
-                <img className="logo-main" src="img/coco-solu.png" alt="" />
+                <img className="logo-main" src="/img/main-logo.png" alt="" />
               </a>
             </div>
 
@@ -38,12 +47,17 @@ const Navbar = ({
                   </Link>
                 </li>
                 <li className="uk-visible@s">
-                  <Link smooth className="navbar-font" to="/#about-section">
+                  <Link
+                    smooth
+                    className="navbar-font"
+                    to="/#about"
+                    scroll={(el) => scrollWithOffset(el, 120)}
+                  >
                     {navbarAbout}
                   </Link>
                 </li>
                 <li className="uk-visible@s">
-                  <Link className="navbar-font" to="/products">
+                  <Link className="navbar-font" to="/#products">
                     {navbarProduct}
                     <span data-uk-icon="icon: chevron-down"></span>
                   </Link>

@@ -1,13 +1,20 @@
 .sticky-navbar {
   top: 0;
   z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.075) !important;
+  background-color: rgba(182, 182, 182, 0.658) !important;
 }
 
 .navbar-font {
   text-transform: capitalize !important;
+  color: rgb(87, 87, 87) !important;
+  font-size: 1rem !important;
+  font-weight: 500;
 }
 
 .test-icon {
   border: none;
+}
+
+.logo-main {
+  width: 60px;
 }

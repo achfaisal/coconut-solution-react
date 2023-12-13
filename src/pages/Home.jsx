@@ -1,42 +1,62 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
-import homeEn from "../lang/home-en";
-import homeId from "../lang/home-id";
 import Navbar from "../components/Navbar";
 import Gallery from "../components/Gallery";
 import AboutSection from "../components/AboutSection";
 import ProductsSection from "../components/ProductsSection";
+import navbarData from "../lang/navbarData";
+import { aboutDataId, aboutDataEn } from "../lang/aboutData";
+import { homeDataId, homeDataEn } from "../lang/homeData";
+import { productEn, productId } from "../lang/productData";
 
 const Home = () => {
-  const getHomeData = () => {
+  const getNavData = () => {
     const currentLanguage = i18n.language;
-    return currentLanguage === "en" ? homeEn() : homeId();
+    return navbarData.find((lang) => lang.language === currentLanguage);
   };
 
-  const homeData = getHomeData();
-  useTranslation();
+  const getAboutData = () => {
+    const currentLanguage = i18n.language;
+    return currentLanguage === "en" ? aboutDataEn : aboutDataId;
+  };
+
+  const getProductData = () => {
+    const currentLanguage = i18n.language;
+    return currentLanguage === "en" ? productEn : productId;
+  };
+
+  const getHomeData = () => {
+    const currentLanguage = i18n.language;
+    return currentLanguage === "en" ? homeDataEn : homeDataId;
+  };
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
 
+  useTranslation();
+
   return (
     <>
       <Navbar
-        navbarHome={homeData[0].navbarHome}
-        navbarAbout={homeData[0].navbarAbout}
-        navbarProduct={homeData[0].navbarProduct}
-        navbarContact={homeData[0].navbarContact}
+        navbarHome={getNavData().home}
+        navbarAbout={getNavData().about}
+        navbarProduct={getNavData().product}
+        navbarContact={getNavData().contact}
         onClickHandler={changeLanguage}
       />
       <Gallery />
       <AboutSection
-        aboutTitle={homeData[0].aboutTitle}
-        about={homeData[0].about}
+        cards={getAboutData()}
+        aboutHeader={getHomeData()[0].aboutHeader}
+        aboutDesc={getHomeData()[0].aboutDesc}
       />
-      <ProductsSection />
+      <ProductsSection
+        cards={getProductData()}
+        productHeader={getHomeData()[0].productHeader}
+        productDesc={getHomeData()[0].productDesc}
+      />
     </>
   );
 };
