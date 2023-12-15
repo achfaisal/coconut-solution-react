@@ -1,0 +1,120 @@
+/* Navbar */
+.sticky-navbar {
+  top: 0;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.658) !important;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-font {
+  text-transform: capitalize !important;
+  color: rgb(87, 87, 87) !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  font-family: "Rethink Sans", sans-serif !important;
+}
+
+.hamburger {
+  border: none;
+}
+
+.logo-main {
+  width: 60px;
+}
+
+.dotnav-gallery {
+  background-color: rgb(243, 243, 243);
+  margin-bottom: 0;
+}
+
+/* About Section */
+.about-card {
+  padding: 1rem;
+  color: black;
+}
+
+.about-section {
+  background-color: rgb(248, 248, 248);
+}
+
+.about-card__container {
+  padding-block: 30px;
+}
+
+/* About Page */
+.about-main__container {
+  background-color: rgb(224, 224, 224);
+}
+
+.about-image__container {
+  background-color: #1c5db8;
+  height: 40vh;
+  background: url("/img/kelapa-1.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 30px;
+}
+
+.about-text__container {
+  height: 1000px;
+}
+
+.about-text__container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-text__container p {
+  line-height: 1.5;
+}
+
+/* Products Section */
+.uk-card-body {
+  padding: 18px;
+  padding-bottom: 5px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.products-cards {
+  margin-top: 15px;
+}
+
+.product-cards__container {
+  padding-block: 30px;
+}
+
+h1,
+p {
+  padding-bottom: 10px;
+}
+
+h3 {
+  padding-block: 5px;
+}
+
+/* Footer Section */
+.footer-container {
+  background-color: #1c5db8;
+  color: white;
+}
+.footer-container h1 {
+  color: white;
+  font-weight: 700;
+  font-size: large;
+}
+
+.footer-container p {
+  line-height: 1.6;
+}
+
+.copyright-section p {
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #1c5db8;
+}

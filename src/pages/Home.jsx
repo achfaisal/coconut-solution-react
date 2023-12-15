@@ -2,13 +2,15 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 import Navbar from "../components/Navbar";
-import Gallery from "../components/Gallery";
-import AboutSection from "../components/AboutSection";
-import ProductsSection from "../components/ProductsSection";
 import navbarData from "../lang/navbarData";
 import { aboutDataId, aboutDataEn } from "../lang/aboutData";
 import { homeDataId, homeDataEn } from "../lang/homeData";
 import { productEn, productId } from "../lang/productData";
+import Gallery from "../components/Gallery";
+import AboutSection from "../components/AboutSection";
+import ProductsSection from "../components/ProductsSection";
+import Footer from "../components/Footer";
+import "../css/style.css";
 
 const Home = () => {
   const getNavData = () => {
@@ -57,6 +59,7 @@ const Home = () => {
         productHeader={getHomeData()[0].productHeader}
         productDesc={getHomeData()[0].productDesc}
       />
+      <Footer />
     </>
   );
 };

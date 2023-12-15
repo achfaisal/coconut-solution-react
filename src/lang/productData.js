@@ -11,6 +11,12 @@ export const productEn = [
     productDetail: "This is coco bristle description in English",
     imageUrl: "/img/kelapa-2.png",
   },
+  {
+    id: 3,
+    productName: "Coco Husk",
+    productDetail: "This is coco husk description in English",
+    imageUrl: "/img/kelapa-2.png",
+  },
 ];
 
 export const productId = [
@@ -24,6 +30,12 @@ export const productId = [
     id: 2,
     productName: "Coco Bristle",
     productDetail: "Ini adalah deskripsi coco bristle dalam Bahasa Indonesia",
+    imageUrl: "/img/kelapa-2.png",
+  },
+  {
+    id: 3,
+    productName: "Coco Husk",
+    productDetail: "Ini adalah deskripsi coco husk dalam Bahasa Indonesia",
     imageUrl: "/img/kelapa-2.png",
   },
 ];

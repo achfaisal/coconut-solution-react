@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 const Gallery = () => {
   return (
     <>
-      <div data-uk-slideshow="animation: push; min-height: 300; max-height: 400; autoplay: true; autoplay-interval: 3000">
+      <div
+        className="dotnav-gallery"
+        data-uk-slideshow="animation: push; min-height: 300; max-height: 400; autoplay: true; autoplay-interval: 3000"
+      >
         <div
           className="uk-position-relative uk-visible-toggle uk-light"
           data-tabindex="-1"
@@ -34,7 +37,7 @@ const Gallery = () => {
           ></Link>
         </div>
 
-        <ul className="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin uk-hidden@s"></ul>
+        <ul className="dotnav-gallery uk-slideshow-nav uk-dotnav uk-flex-center uk-margin uk-hidden@s"></ul>
       </div>
     </>
   );

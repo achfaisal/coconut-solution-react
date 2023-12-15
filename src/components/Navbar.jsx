@@ -1,8 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
-import "../css/Navbar.css";
-
 const Navbar = ({
   navbarHome,
   navbarAbout,
@@ -34,9 +32,9 @@ const Navbar = ({
         <div className="uk-container">
           <div data-uk-navbar>
             <div className="uk-flex-middle uk-navbar-left">
-              <a href="#">
+              <Link to="/" onClick={scrollToTop}>
                 <img className="logo-main" src="/img/main-logo.png" alt="" />
-              </a>
+              </Link>
             </div>
 
             <div className="uk-navbar-right">
@@ -48,7 +46,6 @@ const Navbar = ({
                 </li>
                 <li className="uk-visible@s">
                   <Link
-                    smooth
                     className="navbar-font"
                     to="/#about"
                     scroll={(el) => scrollWithOffset(el, 120)}
@@ -57,7 +54,11 @@ const Navbar = ({
                   </Link>
                 </li>
                 <li className="uk-visible@s">
-                  <Link className="navbar-font" to="/#products">
+                  <Link
+                    className="navbar-font"
+                    to="/#products"
+                    scroll={(el) => scrollWithOffset(el, 80)}
+                  >
                     {navbarProduct}
                     <span data-uk-icon="icon: chevron-down"></span>
                   </Link>
@@ -127,7 +128,7 @@ const Navbar = ({
 
                 <li>
                   <a
-                    className="uk-button uk-button-default uk-margin-small-right uk-hidden@s test-icon"
+                    className="uk-button uk-button-default uk-margin-small-right uk-hidden@s hamburger"
                     type="button"
                     data-uk-toggle="target: #offcanvas-usage"
                   >
