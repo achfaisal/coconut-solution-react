@@ -133,6 +133,11 @@ h1 {
   border-radius: 10px;
 }
 
+.border-radius__left {
+  border-top-left-radius: 10px; /* Adjust the radius as needed */
+  border-bottom-left-radius: 10px; /* Adjust the radius as needed */
+}
+
 .remove-text__decoration:hover {
   text-decoration: none;
 }

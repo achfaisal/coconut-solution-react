@@ -4,14 +4,14 @@ export const aboutDataId = [
     title: "Produk",
     body: "Indonesia",
     aboutTitle: "Pertama",
-    about: "Ini adalah about pertama",
+    about: "Ini adalah about pertama Ini adalah about pertama",
   },
   {
     id: 2,
     title: "Produk",
     body: "Indonesia",
     aboutTitle: "Kedua",
-    about: "Ini adalah about kedua",
+    about: "Ini adalah about kedua Ini adalah about kedua",
   },
 ];
 
@@ -21,13 +21,13 @@ export const aboutDataEn = [
     title: "Product",
     body: "English",
     aboutTitle: "First",
-    about: "This is first about",
+    about: "This is first about This is first about",
   },
   {
     id: 2,
     title: "Product",
     body: "English",
     aboutTitle: "Second",
-    about: "This is second about",
+    about: "This is second about This is second about",
   },
 ];
