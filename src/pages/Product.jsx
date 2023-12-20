@@ -48,17 +48,22 @@ const Product = () => {
         onClickHandler={changeLanguage}
       />
 
-      <div
+      {/* <div
         className="uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
         data-src={selectedProduct.imageUrl}
         data-uk-img
       >
         <h1 className="product-title">{selectedProduct.productName}</h1>
+      </div> */}
+
+      <div className="product-image__container">
+        <img src={selectedProduct.imageUrl} alt="Kelapa Image" />
       </div>
+
       <section className="uk-container product-order">
         <div
           className="uk-child-width-expand@s uk-grid-large product-breadcrumb"
-          data-uk-grid=""
+          data-uk-grid
         >
           <div>
             <nav aria-label="Breadcrumb">

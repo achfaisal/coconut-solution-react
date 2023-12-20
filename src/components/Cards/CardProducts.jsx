@@ -10,7 +10,7 @@ const CardProducts = ({ productName, productDetail, imageUrl }) => {
       to={`/products/${formattedProductName}`}
     >
       <div className="card-border uk-card-height uk-card uk-card-hover uk-card-default">
-        <div className="uk-card-body">
+        <div className="uk-card-body card-products">
           <img src={imageUrl} alt="" className="card-image" />
           <h3 className="uk-card-title title-margin">{productName}</h3>
           <p className="product-text">{productDetail}</p>

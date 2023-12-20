@@ -11,7 +11,7 @@ const Navbar = ({
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      // behavior: "smooth",
     });
   };
 
@@ -20,14 +20,15 @@ const Navbar = ({
     window.scroll({
       top: elementPosition,
       left: 0,
-      behavior: "smooth",
+      // behavior: "smooth",
     });
   };
+
   return (
     <>
       <nav
         data-uk-sticky
-        className="sel-target: uk-navbar-container sticky-navbar cls-active: uk-navbar-sticky"
+        className="sel-target: uk-navbar-container sticky-navbar cls-active: uk-navbar-sticky navbar-container"
       >
         <div className="uk-container">
           <div data-uk-navbar>
@@ -47,8 +48,9 @@ const Navbar = ({
                 <li className="uk-visible@s">
                   <Link
                     className="navbar-font"
-                    to="/#about"
+                    to="/about"
                     scroll={(el) => scrollWithOffset(el, 120)}
+                    onClick={scrollToTop}
                   >
                     {navbarAbout}
                   </Link>
@@ -126,6 +128,7 @@ const Navbar = ({
                   </div>
                 </li>
 
+                {/* Sidebar Offcanvas */}
                 <li>
                   <a
                     className="uk-button uk-button-default uk-margin-small-right uk-hidden@s hamburger"
@@ -134,7 +137,7 @@ const Navbar = ({
                   >
                     <span data-uk-icon="menu"></span>
                   </a>
-                  <div id="offcanvas-usage" data-uk-offcanvas="">
+                  <div id="offcanvas-usage" data-uk-offcanvas>
                     <div className="uk-offcanvas-bar">
                       <button
                         className="uk-offcanvas-close"
@@ -142,39 +145,53 @@ const Navbar = ({
                         data-uk-close=""
                       />
                       <ul className="uk-nav uk-nav-default">
-                        <li className="uk-active">
-                          <a href="#">Home</a>
+                        <li>
+                          <Link to="/" onClick={scrollToTop}>
+                            {navbarHome}
+                          </Link>
                         </li>
                         <li>
-                          <a href="#" data-uk-scroll="offset: 110">
-                            About Us
-                          </a>
+                          <Link
+                            to="/#about"
+                            scroll={(el) => scrollWithOffset(el, 120)}
+                          >
+                            {navbarAbout}
+                          </Link>
+                          {/* <a href="#" data-uk-scroll="offset: 110">
+                            {navbarAbout}
+                          </a> */}
                         </li>
                         <li className="uk-parent">
-                          <a href="#" data-uk-scroll="offset: 80">
-                            Product
-                          </a>
+                          <Link
+                            to="/#products"
+                            scroll={(el) => scrollWithOffset(el, 80)}
+                          >
+                            {navbarProduct}
+                          </Link>
+                          {/* <a href="#" data-uk-scroll="offset: 80">
+                            {navbarProduct}
+                          </a> */}
                           <ul className="uk-nav-sub">
                             <li>
-                              <a href="#">Coco Fiber</a>
+                              <Link>Coco Fiber</Link>
                             </li>
                             <li>
-                              <a href="#">Coco Mesh</a>
-                            </li>
-                            <li className="uk-active">
-                              <a href="#">Coco Bristle</a>
+                              <Link>Coco Mesh</Link>
                             </li>
                             <li>
-                              <a href="#">Cocopeat</a>
+                              <Link>Coco Bristle</Link>
                             </li>
                             <li>
-                              <a href="#">Coco Sheet</a>
+                              <Link>Cocopeat</Link>
+                            </li>
+                            <li>
+                              <Link>Coco Sheet</Link>
                             </li>
                           </ul>
                         </li>
                         <li>
                           <a href="#" data-uk-scroll>
-                            Contact Us
+                            {navbarContact}
                           </a>
                         </li>
                         <li className="uk-parent">
@@ -183,10 +200,14 @@ const Navbar = ({
                           </a>
                           <ul className="uk-nav-sub">
                             <li>
-                              <a href="#">English</a>
+                              <Link onClick={() => onClickHandler("en")}>
+                                English
+                              </Link>
                             </li>
                             <li>
-                              <a href="#">Bahasa Indonesia</a>
+                              <Link onClick={() => onClickHandler("id")}>
+                                Bahasa Indonesia
+                              </Link>
                             </li>
                           </ul>
                         </li>
@@ -199,67 +220,6 @@ const Navbar = ({
           </div>
         </div>
       </nav>
-
-      {/* Off Canvas Sidebar */}
-      <div id="offcanvas-overlay" data-uk-offcanvas="overlay: true">
-        <div className="uk-offcanvas-bar">
-          <button
-            className="uk-offcanvas-close"
-            type="button"
-            data-uk-close
-          ></button>
-          <ul className="uk-nav uk-nav-default">
-            <li className="uk-active">
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#" data-uk-scroll="offset: 110">
-                About Us
-              </a>
-            </li>
-            <li className="uk-parent">
-              <a href="#" data-uk-scroll="offset: 80">
-                Product
-              </a>
-              <ul className="uk-nav-sub">
-                <li>
-                  <a href="#">Coco Fiber</a>
-                </li>
-                <li>
-                  <a href="#">Coco Mesh</a>
-                </li>
-                <li className="uk-active">
-                  <a href="#">Coco Bristle</a>
-                </li>
-                <li>
-                  <a href="#">Cocopeat</a>
-                </li>
-                <li>
-                  <a href="#">Coco Sheet</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" data-uk-scroll>
-                Contact Us
-              </a>
-            </li>
-            <li className="uk-parent">
-              <a href="#" data-uk-scroll="offset: 80">
-                Language
-              </a>
-              <ul className="uk-nav-sub">
-                <li>
-                  <a href="#">English</a>
-                </li>
-                <li>
-                  <a href="#">Bahasa Indonesia</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
     </>
   );
 };

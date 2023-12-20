@@ -27,6 +27,7 @@ const About = () => {
       />
       <div className="about-main__container">
         <div className="about-image__container"></div>
+
         <div className="uk-container about-text__container">
           <h1 className="uk-text-center">TENTANG KAMI</h1>
           <div className="uk-child-width-1-1 uk-child-width-1-2@s" data-uk-grid>

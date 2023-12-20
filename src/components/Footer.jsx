@@ -10,7 +10,10 @@ const Footer = () => {
           data-uk-grid
         >
           <div>
-            <img src="/img/main-logo.png" alt="" width="100px" />
+            <div className="uk-margin-bottom">
+              <img src="/img/white-logo.png" alt="" width="100px" />
+              <h1>PT. Indo Kelapa Nusantara</h1>
+            </div>
             <h1>Address</h1>
             <p>Jl. Sunset Road No.28, Kelurahan Seminyak, Badung, Bali</p>
           </div>

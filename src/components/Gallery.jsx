@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Gallery = () => {
   return (
     <>
       <div
         className="dotnav-gallery"
-        data-uk-slideshow="animation: push; min-height: 300; max-height: 400; autoplay: true; autoplay-interval: 3000"
+        data-uk-slideshow="animation: push; max-height: 600;"
       >
         <div
           className="uk-position-relative uk-visible-toggle uk-light"
@@ -14,12 +14,18 @@ const Gallery = () => {
         >
           <ul className="uk-slideshow-items">
             <li>
-              <img src="/img/kelapa-1.jpg" alt="" data-uk-cover />
+              <iframe
+                style={{ width: "100%", height: "100%" }}
+                src="https://www.youtube.com/embed/2ickhM20h2k?si=JH2IT7q0MQ0mC5IZ"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen={true}
+              />
+
               <div className="uk-position-center uk-overlay"></div>
             </li>
             <li>
               <img src="/img/kelapa-2.png" alt="" data-uk-cover />
-              <div className="uk-position-center uk-overlay"></div>
             </li>
           </ul>
 

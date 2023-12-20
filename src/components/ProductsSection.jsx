@@ -6,7 +6,7 @@ const ProductsSection = ({ cards, productHeader, productDesc }) => {
     <section id="products">
       <div className="uk-container product-cards__container">
         <div className="uk-text-center">
-          <h1>{productHeader}</h1>
+          <h1 className="product-section__header">{productHeader}</h1>
           <p>{productDesc}</p>
         </div>
         <div
