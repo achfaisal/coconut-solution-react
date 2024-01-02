@@ -17,8 +17,8 @@ export const productEn = [
     extendedProductDetail:
       "Cocomesh is a natural material made from coconut husk with numerous benefits and applications in various industries. \n </br>Its environmentally friendly nature, strong durability, and ability to decompose naturally.",
     imageUrl: "/img/cocomesh/cocomesh1.jpg",
-    imageUrl2: "/img/cocofiber/cocofiber2.jpg",
-    imageUrl3: "/img/cocofiber/cocofiber3.jpg",
+    imageUrl2: "/img/cocomesh/cocomesh2.png",
+    imageUrl3: "/img/cocomesh/cocomesh3.jpg",
     headerImageUrl: "/img/banner/coco2.jpg",
   },
   {
@@ -40,6 +40,8 @@ export const productEn = [
     extendedProductDetail:
       "Cocopeat is fiber or powder obtained from the outer husk of the coconut. \n </br> Cocopeat has a relatively high water content, so it needs to be dried before use. It also has a fine texture and a dark brown color.",
     imageUrl: "/img/cocopeat/cocopeat1.jpg",
+    imageUrl2: "/img/cocopeat/cocopeat1.jpg",
+    imageUrl3: "/img/cocopeat/cocopeat1.jpg",
     headerImageUrl: "/img/banner/coco3.jpg",
   },
   {
@@ -50,6 +52,8 @@ export const productEn = [
     extendedProductDetail:
       "Coco Sheet is one of the products made from compressed coconut husk and is shaped into sheets resembling a carpet. Coco Sheet retains the natural color of coconut husk, which is a yellowish-brown hue.",
     imageUrl: "/img/cocosheet/cocosheet1.jpg",
+    imageUrl2: "/img/cocosheet/cocosheet1.jpg",
+    imageUrl3: "/img/cocosheet/cocosheet1.jpg",
     headerImageUrl: "/img/banner/coco3.jpg",
   },
 ];
@@ -96,6 +100,8 @@ export const productId = [
     extendedProductDetail:
       "Cocopeat adalah serat atau serbuk kelapa yang diperoleh dari kulit luar buah kelapa.\n </br> Cocopeat memiliki kandungan air yang cukup tinggi, sehingga perlu dikeringkan terlebih dahulu sebelum digunakan. Cocopeat juga memiliki tekstur yang cukup halus dan berwarna coklat kehitaman.",
     imageUrl: "/img/cocopeat/cocopeat1.jpg",
+    imageUrl2: "/img/cocopeat/cocopeat1.jpg",
+    imageUrl3: "/img/cocopeat/cocopeat1.jpg",
     headerImageUrl: "/img/banner/coco3.jpg",
   },
   {
@@ -106,6 +112,8 @@ export const productId = [
     extendedProductDetail:
       "Coco Sheet adalah salah satu produk yang terbuat dari sabut kelapa yang ditekan dan berbentuk lembaran seperti karpet. Coco sheet memiliki warna alami sabut kelapa, yaitu kuning kecoklatan.",
     imageUrl: "/img/cocosheet/cocosheet1.jpg",
+    imageUrl2: "/img/cocosheet/cocosheet1.jpg",
+    imageUrl3: "/img/cocosheet/cocosheet1.jpg",
     headerImageUrl: "/img/banner/coco3.jpg",
   },
 ];
