@@ -1,5 +1,8 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { productEn, productId } from "../lang/productData";
+import i18n from "../i18n";
+import { useTranslation } from "react-i18next";
 
 const Navbar = ({
   navbarHome,
@@ -24,6 +27,14 @@ const Navbar = ({
     });
   };
 
+  const products = () => {
+    const currentLanguage = i18n.language;
+    return currentLanguage === "en" ? productEn : productId;
+  };
+
+  console.log(products());
+  useTranslation();
+
   return (
     <>
       <nav
@@ -40,12 +51,12 @@ const Navbar = ({
 
             <div className="uk-navbar-right">
               <ul className="uk-navbar-nav custom-nav">
-                <li className="uk-visible@s">
+                <li className="uk-visible@m">
                   <Link className="navbar-font" to="/" onClick={scrollToTop}>
                     {navbarHome}
                   </Link>
                 </li>
-                <li className="uk-visible@s">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     to="/about"
@@ -55,7 +66,7 @@ const Navbar = ({
                     {navbarAbout}
                   </Link>
                 </li>
-                <li className="uk-visible@s">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     to="/#products"
@@ -70,26 +81,22 @@ const Navbar = ({
                     data-uk-dropdown="offset:0"
                   >
                     <ul className="uk-nav uk-navbar-dropdown-nav">
-                      <li>
-                        <Link>Coco Fiber</Link>
-                      </li>
-                      <li>
-                        <Link>Coco Mesh</Link>
-                      </li>
-                      <li>
-                        <Link>Coco Mesh</Link>
-                      </li>
-                      <li>
-                        <Link>Cocopeat</Link>
-                      </li>
-                      <li>
-                        <Link>Coco Sheet</Link>
-                      </li>
+                      {products().map((product) => (
+                        <li key={product.id}>
+                          <Link
+                            to={`/products/${product.productName
+                              .replace(/\s/g, "")
+                              .toLowerCase()}`}
+                          >
+                            {product.productName}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </li>
 
-                <li className="uk-visible@s">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     href="#"
@@ -99,7 +106,7 @@ const Navbar = ({
                   </Link>
                 </li>
 
-                <li className="uk-visible@s">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     href="#"
@@ -131,7 +138,7 @@ const Navbar = ({
                 {/* Sidebar Offcanvas */}
                 <li>
                   <a
-                    className="uk-button uk-button-default uk-margin-small-right uk-hidden@s hamburger"
+                    className="hamburger-button uk-button uk-button-default uk-margin-small-right uk-hidden@m"
                     type="button"
                     data-uk-toggle="target: #offcanvas-usage"
                   >
@@ -142,7 +149,7 @@ const Navbar = ({
                       <button
                         className="uk-offcanvas-close"
                         type="button"
-                        data-uk-close=""
+                        data-uk-close
                       />
                       <ul className="uk-nav uk-nav-default">
                         <li>
@@ -157,9 +164,6 @@ const Navbar = ({
                           >
                             {navbarAbout}
                           </Link>
-                          {/* <a href="#" data-uk-scroll="offset: 110">
-                            {navbarAbout}
-                          </a> */}
                         </li>
                         <li className="uk-parent">
                           <Link
@@ -168,25 +172,18 @@ const Navbar = ({
                           >
                             {navbarProduct}
                           </Link>
-                          {/* <a href="#" data-uk-scroll="offset: 80">
-                            {navbarProduct}
-                          </a> */}
                           <ul className="uk-nav-sub">
-                            <li>
-                              <Link>Coco Fiber</Link>
-                            </li>
-                            <li>
-                              <Link>Coco Mesh</Link>
-                            </li>
-                            <li>
-                              <Link>Coco Bristle</Link>
-                            </li>
-                            <li>
-                              <Link>Cocopeat</Link>
-                            </li>
-                            <li>
-                              <Link>Coco Sheet</Link>
-                            </li>
+                            {products().map((product) => (
+                              <li key={product.id}>
+                                <Link
+                                  to={`/products/${product.productName
+                                    .replace(/\s/g, "")
+                                    .toLowerCase()}`}
+                                >
+                                  {product.productName}
+                                </Link>
+                              </li>
+                            ))}
                           </ul>
                         </li>
                         <li>

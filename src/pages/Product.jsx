@@ -5,6 +5,8 @@ import i18n from "../i18n";
 import Navbar from "../components/Navbar";
 import navbarData from "../lang/navbarData";
 import { productEn, productId } from "../lang/productData";
+import Footer from "../components/Footer";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Product = () => {
   const getNavData = () => {
@@ -23,20 +25,29 @@ const Product = () => {
 
   const { productName } = useParams();
 
-  // Remove spaces and convert the URL-friendly product name back to lowercase
-  const formattedProductName = productName.replace(/\s+/g, "").toLowerCase();
-
-  // Find the product based on the formatted product name
   const selectedProduct = getProductData().find(
     (product) =>
-      product.productName.toLowerCase().replace(/\s+/g, "") ===
-      formattedProductName
+      product.productName.toLowerCase().replace(/\s+/g, "") === productName
   );
 
   if (!selectedProduct) {
-    // Handle the case where the product is not found
     return <div>Product not found</div>;
   }
+
+  const paragraphs = selectedProduct.extendedProductDetail
+    .split("\n")
+    .map((paragraph, index) => (
+      <p key={index}>
+        {paragraph.includes("</br>")
+          ? paragraph.split("</br>").map((line, i) => (
+              <React.Fragment key={i}>
+                {line}
+                {i < paragraph.split("</br>").length - 1 && <br />}
+              </React.Fragment>
+            ))
+          : paragraph}
+      </p>
+    ));
 
   return (
     <div>
@@ -48,19 +59,12 @@ const Product = () => {
         onClickHandler={changeLanguage}
       />
 
-      {/* <div
-        className="uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
-        data-src={selectedProduct.imageUrl}
-        data-uk-img
-      >
-        <h1 className="product-title">{selectedProduct.productName}</h1>
-      </div> */}
-
-      <div className="product-image__container">
-        <img src={selectedProduct.imageUrl} alt="Kelapa Image" />
+      <div className="image-container">
+        <img src={selectedProduct.headerImageUrl} alt="Your Image" />
+        <div className="center-text">{selectedProduct.productName}</div>
       </div>
 
-      <section className="uk-container product-order">
+      <section className="uk-container product-order uk-margin-bottom">
         <div
           className="uk-child-width-expand@s uk-grid-large product-breadcrumb"
           data-uk-grid
@@ -69,49 +73,24 @@ const Product = () => {
             <nav aria-label="Breadcrumb">
               <ul className="uk-breadcrumb">
                 <li>
-                  <a href="#">Product</a>
+                  <Link to="/#products">Products</Link>
                 </li>
                 <li>
-                  <a href="#">{selectedProduct.productName}</a>
+                  <Link to="#">{selectedProduct.productName}</Link>
                 </li>
               </ul>
             </nav>
-            <img className="product-img" src="img/cocobristle.jpg" alt="" />
-            <p className="product-desc">{selectedProduct.productDetail}</p>
+            <img className="product-img" src={selectedProduct.imageUrl2} />
+            <div className="product-desc">{paragraphs}</div>
           </div>
           <div>
             <ul>
               <div>
-                <h4>Spesifikasi</h4>
+                <h4 className="spec-title">Spesifikasi</h4>
                 <ul className="uk-list uk-list-disc">
-                  <li className="margin-li">
-                    Memiliki panjang serat minimal 5 cm
-                  </li>
-                  <li>Memiliki kadar air kurang dari 15%</li>
                   <li>
-                    Memiliki kepadatan yang baik dan tidak terlalu padat atau
-                    terlalu renggang.
-                  </li>
-                  <li>
-                    Cocofiber memiliki warna yang cerah dan tidak terlalu kusam
-                  </li>
-                  <li>
-                    Mempunyai kandungan mineral yang baik untuk pertumbuhan
-                    tanaman seperti kalium, magnesium, natrium, fosfor, dan
-                    kalsium.
-                  </li>
-                  <li>Mempunyai tingkat pH antara 5,5 hingga 6,5.</li>
-                  <li>
-                    Mampu menyerap dan menyimpan cadangan udara yang baik.
-                  </li>
-                  <li>Bebas bakteri, jamur, dan lumut.</li>
-                  <li>
-                    Memiliki daya serap yang baik sehingga air yang disiram
-                    tidak terciprat ke area sekitarnya.
-                  </li>
-                  <li>
-                    Serat kelas terbaik berwarna terang, kuning keemasan (serat
-                    dari kelapa mentah) atau coklat (serat dari kelapa matang).
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+                    earum.
                   </li>
                 </ul>
               </div>
@@ -124,19 +103,33 @@ const Product = () => {
           <div className="gallery-container" data-uk-lightbox="">
             <a
               className="gallery-images"
-              href="img/product-img/cocobristle1.jpg"
-              data-caption="Image"
+              href={selectedProduct.imageUrl3}
+              data-caption={selectedProduct.productName}
             >
               <img
                 className="gallery-border"
-                src="img/product-img/cocobristle1.jpg"
+                src={selectedProduct.imageUrl3}
                 alt=""
+                width="100px"
+              />
+            </a>
+            <a
+              className="gallery-images"
+              href={selectedProduct.imageUrl}
+              data-caption={selectedProduct.productName}
+            >
+              <img
+                className="gallery-border"
+                src={selectedProduct.imageUrl}
+                alt=""
+                width="100px"
               />
             </a>
           </div>
         </div>
       </section>
       {/* Product section end */}
+      <Footer />
     </div>
   );
 };

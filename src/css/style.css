@@ -10,7 +10,8 @@
   font-family: "Rethink Sans", sans-serif !important;
 }
 
-.hamburger {
+.hamburger-button {
+  margin-right: 0 !important;
   border: none;
 }
 
@@ -98,7 +99,7 @@ h3 {
   width: 100%;
   height: 100px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .products-cards {
@@ -110,7 +111,10 @@ h3 {
 }
 
 .card-products {
-  padding: 15px;
+  padding-top: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 0;
 }
 
 .product-section__header {
@@ -138,6 +142,11 @@ h3 {
   margin-top: 10px;
   padding: 10px;
   background-color: #1c5db8;
+}
+
+.footer-company__name h1 {
+  padding-top: 10px;
+  padding-bottom: 0;
 }
 
 /* About Page */
@@ -182,3 +191,81 @@ h3 {
 .about-text__container p {
   line-height: 1.5;
 }
+
+/* Products Page */
+.uk-breadcrumb {
+  margin-bottom: 20px;
+}
+
+.spec-title {
+  margin-bottom: 15px;
+}
+
+.uk-list li {
+  line-height: 1.4;
+}
+
+.product-desc {
+  padding-bottom: 0;
+  padding-top: 20px;
+  line-height: 1.4;
+}
+.product-desc p {
+  padding-bottom: 0;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Style for the image */
+.image-container img {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: 200px; /* Maintain the aspect ratio */
+  object-fit: cover;
+}
+
+/* Style for the text */
+.center-text {
+  position: absolute;
+  top: 50%; /* Center the text vertically */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center the text both horizontally and vertically */
+  color: white; /* Change the text color */
+  font-size: 24px; /* Adjust the font size */
+  font-weight: bold; /* Adjust the font weight */
+}
+
+.product-cards__height {
+  height: 205px;
+}
+
+.product-text {
+  padding: 0;
+}
+
+.gallery-images {
+  margin-right: 15px;
+}
+
+.gallery-border {
+  border-radius: 10px;
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.gallery-border:hover {
+  filter: brightness(0.7);
+}
+
+.gallery-container {
+  padding-block: 20px;
+}
+
+/* TEST */

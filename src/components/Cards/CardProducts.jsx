@@ -1,15 +1,16 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
-const CardProducts = ({ productName, productDetail, imageUrl }) => {
+const CardProducts = ({ productName, productDetail, imageUrl, onClick }) => {
   const formattedProductName = productName.toLowerCase().replace(/\s/g, "");
 
   return (
     <Link
-      className="remove-text__decoration"
+      className="remove-text__decoration "
       to={`/products/${formattedProductName}`}
+      onClick={onClick}
     >
-      <div className="card-border uk-card-height uk-card uk-card-hover uk-card-default">
+      <div className="card-border uk-card-height uk-card uk-card-hover uk-card-default product-cards__height">
         <div className="uk-card-body card-products">
           <img src={imageUrl} alt="" className="card-image" />
           <h3 className="uk-card-title title-margin">{productName}</h3>

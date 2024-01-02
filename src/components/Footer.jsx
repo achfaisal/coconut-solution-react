@@ -10,7 +10,7 @@ const Footer = () => {
           data-uk-grid
         >
           <div>
-            <div className="uk-margin-bottom">
+            <div className="uk-margin-bottom footer-company__name">
               <img src="/img/white-logo.png" alt="" width="100px" />
               <h1>PT. Indo Kelapa Nusantara</h1>
             </div>

@@ -7,8 +7,8 @@ import { aboutDataId, aboutDataEn } from "../lang/aboutData";
 import { homeDataId, homeDataEn } from "../lang/homeData";
 import { productEn, productId } from "../lang/productData";
 import Gallery from "../components/Gallery";
-import AboutSection from "../components/AboutSection";
-import ProductsSection from "../components/ProductsSection";
+import AboutSection from "../components/Sections/AboutSection";
+import ProductsSection from "../components/Sections/ProductsSection";
 import Footer from "../components/Footer";
 import "../css/style.css";
 
@@ -39,6 +39,12 @@ const Home = () => {
 
   useTranslation();
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <>
       <Navbar
@@ -58,6 +64,7 @@ const Home = () => {
         cards={getProductData()}
         productHeader={getHomeData()[0].productHeader}
         productDesc={getHomeData()[0].productDesc}
+        onClick={scrollToTop}
       />
       <Footer />
     </>
