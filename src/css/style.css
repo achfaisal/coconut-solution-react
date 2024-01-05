@@ -269,3 +269,10 @@ h3 {
 }
 
 /* TEST */
+.margin-icon {
+  margin-right: 10px;
+}
+
+.icon-social {
+  color: white;
+}

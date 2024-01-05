@@ -1,5 +1,6 @@
 import React from "react";
 import Maps from "./Maps";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -19,11 +20,24 @@ const Footer = () => {
           </div>
           <div>
             <h1>Find Us On</h1>
-            <p>
-              Instagram <br />
-              Tokopedia <br />
-              Whatsapp
-            </p>
+            <Link className="icon-social">
+              <p>
+                <span className="margin-icon" data-uk-icon="instagram"></span>
+                <span>Instagram</span>
+              </p>
+            </Link>
+            <Link className="icon-social">
+              <p>
+                <span className="margin-icon" data-uk-icon="heart"></span>
+                <span>Tokopedia</span>
+              </p>
+            </Link>
+            <Link className="icon-social">
+              <p>
+                <span className="margin-icon" data-uk-icon="whatsapp"></span>
+                <span>Whatsapp</span>
+              </p>
+            </Link>
           </div>
           <div>
             <h1>Location</h1>
