@@ -1,4 +1,4 @@
-// SingleProduct.js
+//Product.jsx
 import React from "react";
 import { useParams } from "react-router-dom";
 import i18n from "../i18n";
@@ -7,6 +7,12 @@ import navbarData from "../lang/navbarData";
 import { productEn, productId } from "../lang/productData";
 import Footer from "../components/Footer";
 import { HashLink as Link } from "react-router-hash-link";
+import Cocofiber from "../components/Specifications/Cocofiber";
+import Cocomesh from "../components/Specifications/Cocomesh";
+import Cocobristle from "../components/Specifications/Cocobristle";
+import Cocopeat from "../components/Specifications/Cocopeat";
+import Cocosheet from "../components/Specifications/Cocosheet";
+import Cocopot from "../components/Specifications/Cocopot";
 
 const Product = () => {
   const getNavData = () => {
@@ -34,6 +40,8 @@ const Product = () => {
     return <div>Product not found</div>;
   }
 
+  console.log(productName);
+
   const paragraphs = selectedProduct.extendedProductDetail
     .split("\n")
     .map((paragraph, index) => (
@@ -48,6 +56,21 @@ const Product = () => {
           : paragraph}
       </p>
     ));
+
+  let specComponent = null;
+  if (productName === "cocofiber") {
+    specComponent = <Cocofiber changeLanguage={changeLanguage} />;
+  } else if (productName === "cocomesh") {
+    specComponent = <Cocomesh changeLanguage={changeLanguage} />;
+  } else if (productName === "cocobristle") {
+    specComponent = <Cocobristle changeLanguage={changeLanguage} />;
+  } else if (productName === "cocopeat") {
+    specComponent = <Cocopeat changeLanguage={changeLanguage} />;
+  } else if (productName === "cocosheet") {
+    specComponent = <Cocosheet changeLanguage={changeLanguage} />;
+  } else if (productName === "cocopot") {
+    specComponent = <Cocopot changeLanguage={changeLanguage} />;
+  }
 
   return (
     <div>
@@ -83,19 +106,7 @@ const Product = () => {
             <img className="product-img" src={selectedProduct.imageUrl2} />
             <div className="product-desc">{paragraphs}</div>
           </div>
-          <div>
-            <ul>
-              <div>
-                <h4 className="spec-title">Spesifikasi</h4>
-                <ul className="uk-list uk-list-disc">
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
-                    earum.
-                  </li>
-                </ul>
-              </div>
-            </ul>
-          </div>
+          {specComponent}
         </div>
         <hr />
         <div>

@@ -44,9 +44,9 @@ const Footer = () => {
             <Maps />
           </div>
         </div>
-      </div>
-      <div className="uk-text-center copyright-section">
-        <p>Copyright © 2023 Coconut Solution. All Rights Reserved.</p>
+        <p className="copyright-footer">
+          Copyright © 2023 Coconut Solution. All Rights Reserved.
+        </p>
       </div>
     </div>
   );

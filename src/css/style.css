@@ -124,7 +124,7 @@ h3 {
 
 /* Footer Section */
 .footer-container {
-  background-color: #1c5db8;
+  background: linear-gradient(45deg, rgb(47, 73, 187), rgb(0, 128, 255));
   color: white;
 }
 .footer-container h1 {
@@ -137,11 +137,9 @@ h3 {
   line-height: 1.6;
 }
 
-.copyright-section p {
-  margin-bottom: 0;
+.copyright-footer {
   margin-top: 10px;
-  padding: 10px;
-  background-color: #1c5db8;
+  text-align: center;
 }
 
 .footer-company__name h1 {
@@ -275,4 +273,22 @@ h3 {
 
 .icon-social {
   color: white;
+}
+
+.uk-table td {
+  line-height: 1.4;
+}
+
+.table-product {
+  background-color: #1c5db8;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+.table-spec {
+  color: white !important;
+  text-transform: capitalize !important;
+  font-weight: 600 !important;
+  font-size: 20px !important;
 }
