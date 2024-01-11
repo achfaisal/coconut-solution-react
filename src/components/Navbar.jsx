@@ -87,6 +87,7 @@ const Navbar = ({
                             to={`/products/${product.productName
                               .replace(/\s/g, "")
                               .toLowerCase()}`}
+                            onClick={scrollToTop}
                           >
                             {product.productName}
                           </Link>
