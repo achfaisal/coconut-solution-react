@@ -20,24 +20,35 @@ const Footer = () => {
           </div>
           <div>
             <h1>Find Us On</h1>
-            <Link className="icon-social">
-              <p>
-                <span className="margin-icon" data-uk-icon="instagram"></span>
-                <span>Instagram</span>
-              </p>
-            </Link>
-            <Link className="icon-social">
-              <p>
-                <span className="margin-icon" data-uk-icon="heart"></span>
-                <span>Tokopedia</span>
-              </p>
-            </Link>
-            <Link className="icon-social">
-              <p>
-                <span className="margin-icon" data-uk-icon="whatsapp"></span>
-                <span>Whatsapp</span>
-              </p>
-            </Link>
+            <div>
+              <a
+                href="https://web.whatsapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-container"
+              >
+                <img src="/img/whatsapp.png" alt="" width="20px" />
+                <p>Whatsapp</p>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-container"
+              >
+                <img src="/img/instagram.png" alt="" width="20px" />
+                <p>Instagram</p>
+              </a>
+              <a
+                href="https://www.tokopedia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-container"
+              >
+                <img src="/img/tokped.png" alt="" width="20px" />
+                <p>Tokopedia</p>
+              </a>
+            </div>
           </div>
           <div>
             <h1>Location</h1>

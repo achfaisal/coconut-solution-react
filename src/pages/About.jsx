@@ -21,6 +21,9 @@ const About = () => {
       <Navbar
         navbarHome={getNavData().home}
         navbarAbout={getNavData().about}
+        navbarAirSolution={getNavData().airSolution}
+        navbarLandSolution={getNavData().landSolution}
+        navbarSpillSolution={getNavData().spillSolution}
         navbarProduct={getNavData().product}
         navbarContact={getNavData().contact}
         onClickHandler={changeLanguage}

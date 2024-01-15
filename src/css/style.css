@@ -1,10 +1,11 @@
 .navbar-container {
-  background-color: white !important;
+  z-index: 3;
+  transition: 0.3s ease;
 }
 
 .navbar-font {
   text-transform: capitalize !important;
-  color: rgb(87, 87, 87) !important;
+  color: rgb(0, 0, 0) !important;
   font-size: 1rem !important;
   font-weight: 500;
   font-family: "Rethink Sans", sans-serif !important;
@@ -13,6 +14,7 @@
 .hamburger-button {
   margin-right: 0 !important;
   border: none;
+  color: black !important;
 }
 
 .logo-main {
@@ -267,13 +269,6 @@ h3 {
 }
 
 /* TEST */
-.margin-icon {
-  margin-right: 10px;
-}
-
-.icon-social {
-  color: white;
-}
 
 .uk-table td {
   line-height: 1.4;
@@ -310,7 +305,7 @@ h3 {
 }
 
 .container-video video {
-  filter: brightness(80%);
+  filter: brightness(90%);
   margin-top: -80px;
 }
 
@@ -318,4 +313,30 @@ h3 {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 5px;
+}
+
+.icon-container p {
+  color: white;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.icon-container:hover p {
+  color: black;
+}
+
+.icon-container:hover img {
+  filter: brightness(0);
+}
+
+.icon-container p,
+.icon-container img {
+  transition: color 0.3s, filter 0.3s; /* Add a smooth transition effect */
 }

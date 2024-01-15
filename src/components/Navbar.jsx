@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { productEn, productId } from "../lang/productData";
 import i18n from "../i18n";
@@ -7,14 +7,34 @@ import { useTranslation } from "react-i18next";
 const Navbar = ({
   navbarHome,
   navbarAbout,
+  navbarAirSolution,
+  navbarLandSolution,
+  navbarSpillSolution,
   navbarProduct,
   navbarContact,
   onClickHandler,
 }) => {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      // behavior: "smooth",
     });
   };
 
@@ -23,8 +43,15 @@ const Navbar = ({
     window.scroll({
       top: elementPosition,
       left: 0,
-      // behavior: "smooth",
+      behavior: "smooth",
     });
+  };
+
+  const handleProductLinkClick = () => {
+    const offcanvas = UIkit.offcanvas("#offcanvas-usage");
+    if (offcanvas.isActive()) {
+      offcanvas.hide();
+    }
   };
 
   const products = () => {
@@ -39,7 +66,9 @@ const Navbar = ({
     <>
       <nav
         data-uk-sticky
-        className="sel-target: uk-navbar-container sticky-navbar cls-active: uk-navbar-sticky navbar-container"
+        className={`sel-target: uk-navbar-container sticky-navbar cls-active: uk-navbar-sticky navbar-container ${
+          scrolling ? "" : "uk-navbar-transparent"
+        }`}
       >
         <div className="uk-container">
           <div data-uk-navbar>
@@ -51,12 +80,12 @@ const Navbar = ({
 
             <div className="uk-navbar-right">
               <ul className="uk-navbar-nav custom-nav">
-                <li className="uk-visible@m">
+                <li className="uk-visible@l">
                   <Link className="navbar-font" to="/" onClick={scrollToTop}>
                     {navbarHome}
                   </Link>
                 </li>
-                <li className="uk-visible@m">
+                <li className="uk-visible@l">
                   <Link
                     className="navbar-font"
                     to="/about"
@@ -66,7 +95,37 @@ const Navbar = ({
                     {navbarAbout}
                   </Link>
                 </li>
-                <li className="uk-visible@m">
+                <li className="uk-visible@l">
+                  <Link
+                    className="navbar-font"
+                    to="/about"
+                    scroll={(el) => scrollWithOffset(el, 120)}
+                    onClick={scrollToTop}
+                  >
+                    {navbarAirSolution}
+                  </Link>
+                </li>
+                <li className="uk-visible@l">
+                  <Link
+                    className="navbar-font"
+                    to="/about"
+                    scroll={(el) => scrollWithOffset(el, 120)}
+                    onClick={scrollToTop}
+                  >
+                    {navbarLandSolution}
+                  </Link>
+                </li>
+                <li className="uk-visible@l">
+                  <Link
+                    className="navbar-font"
+                    to="/about"
+                    scroll={(el) => scrollWithOffset(el, 120)}
+                    onClick={scrollToTop}
+                  >
+                    {navbarSpillSolution}
+                  </Link>
+                </li>
+                <li className="uk-visible@l">
                   <Link
                     className="navbar-font"
                     to="/#products"
@@ -97,7 +156,7 @@ const Navbar = ({
                   </div>
                 </li>
 
-                <li className="uk-visible@m">
+                <li className="uk-visible@l">
                   <Link
                     className="navbar-font"
                     href="#"
@@ -107,7 +166,7 @@ const Navbar = ({
                   </Link>
                 </li>
 
-                <li className="uk-visible@m">
+                <li className="uk-visible@l">
                   <Link
                     className="navbar-font"
                     href="#"
@@ -139,11 +198,14 @@ const Navbar = ({
                 {/* Sidebar Offcanvas */}
                 <li>
                   <a
-                    className="hamburger-button uk-button uk-button-default uk-margin-small-right uk-hidden@m"
+                    className="hamburger-button uk-button uk-button-default uk-margin-small-right uk-hidden@l"
                     type="button"
                     data-uk-toggle="target: #offcanvas-usage"
                   >
-                    <span data-uk-icon="menu"></span>
+                    <span
+                      className="hamburger-color"
+                      data-uk-icon="menu"
+                    ></span>
                   </a>
                   <div id="offcanvas-usage" data-uk-offcanvas>
                     <div className="uk-offcanvas-bar">
@@ -166,6 +228,22 @@ const Navbar = ({
                             {navbarAbout}
                           </Link>
                         </li>
+                        <li>
+                          <Link
+                            to="/about"
+                            scroll={(el) => scrollWithOffset(el, 120)}
+                          >
+                            {navbarAirSolution}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/about"
+                            scroll={(el) => scrollWithOffset(el, 120)}
+                          >
+                            {navbarLandSolution}
+                          </Link>
+                        </li>
                         <li className="uk-parent">
                           <Link
                             to="/#products"
@@ -180,6 +258,10 @@ const Navbar = ({
                                   to={`/products/${product.productName
                                     .replace(/\s/g, "")
                                     .toLowerCase()}`}
+                                  onClick={() => {
+                                    scrollToTop();
+                                    handleProductLinkClick();
+                                  }}
                                 >
                                   {product.productName}
                                 </Link>
@@ -193,9 +275,7 @@ const Navbar = ({
                           </a>
                         </li>
                         <li className="uk-parent">
-                          <a href="#" data-uk-scroll="offset: 80">
-                            Language
-                          </a>
+                          Language
                           <ul className="uk-nav-sub">
                             <li>
                               <Link onClick={() => onClickHandler("en")}>

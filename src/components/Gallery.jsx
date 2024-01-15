@@ -13,10 +13,10 @@ const Gallery = () => {
           src="videos/coconut-video.mp4"
         ></video>
       </div>
-      <div className="text-container">
+      {/* <div className="text-container">
         <h1>Your Text Goes Here</h1>
         <p>Additional text or content goes here</p>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -77,6 +77,9 @@ const Product = () => {
       <Navbar
         navbarHome={getNavData().home}
         navbarAbout={getNavData().about}
+        navbarAirSolution={getNavData().airSolution}
+        navbarLandSolution={getNavData().landSolution}
+        navbarSpillSolution={getNavData().spillSolution}
         navbarProduct={getNavData().product}
         navbarContact={getNavData().contact}
         onClickHandler={changeLanguage}
@@ -111,7 +114,7 @@ const Product = () => {
         <hr />
         <div>
           <h1>More Photos</h1>
-          <div className="gallery-container" data-uk-lightbox="">
+          <div className="gallery-container" data-uk-lightbox>
             <a
               className="gallery-images"
               href={selectedProduct.imageUrl3}
@@ -139,6 +142,7 @@ const Product = () => {
           </div>
         </div>
       </section>
+
       {/* Product section end */}
       <Footer />
     </div>

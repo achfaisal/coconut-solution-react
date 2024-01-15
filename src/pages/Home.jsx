@@ -11,6 +11,7 @@ import AboutSection from "../components/Sections/AboutSection";
 import ProductsSection from "../components/Sections/ProductsSection";
 import Footer from "../components/Footer";
 import "../css/style.css";
+import NavbarTest from "../components/NavbarTest";
 
 const Home = () => {
   const getNavData = () => {
@@ -50,10 +51,14 @@ const Home = () => {
       <Navbar
         navbarHome={getNavData().home}
         navbarAbout={getNavData().about}
+        navbarAirSolution={getNavData().airSolution}
+        navbarLandSolution={getNavData().landSolution}
+        navbarSpillSolution={getNavData().spillSolution}
         navbarProduct={getNavData().product}
         navbarContact={getNavData().contact}
         onClickHandler={changeLanguage}
       />
+      {/* <NavbarTest /> */}
       <Gallery />
       <AboutSection
         cards={getAboutData()}
