@@ -11,6 +11,14 @@
   font-family: "Rethink Sans", sans-serif !important;
 }
 
+.navbar-font__transparent {
+  text-transform: capitalize !important;
+  color: white !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  font-family: "Rethink Sans", sans-serif !important;
+}
+
 .hamburger-button {
   margin-right: 0 !important;
   border: none;
@@ -223,7 +231,7 @@ h3 {
 /* Style for the image */
 .image-container img {
   width: 100%; /* Ensure the image takes the full width of its container */
-  height: 200px; /* Maintain the aspect ratio */
+  height: 350px; /* Maintain the aspect ratio */
   object-fit: cover;
 }
 
@@ -305,9 +313,13 @@ h3 {
 }
 
 .container-video video {
-  filter: brightness(90%);
-  margin-top: -80px;
+  filter: brightness(75%);
+  /* margin-top: -80px; */
 }
+
+/* body {
+  margin-top: -80px;
+} */
 
 .video {
   height: 100vh;
