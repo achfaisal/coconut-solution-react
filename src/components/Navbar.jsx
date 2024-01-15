@@ -80,12 +80,12 @@ const Navbar = ({
 
             <div className="uk-navbar-right">
               <ul className="uk-navbar-nav custom-nav">
-                <li className="uk-visible@l">
+                <li className="uk-visible@m">
                   <Link className="navbar-font" to="/" onClick={scrollToTop}>
                     {navbarHome}
                   </Link>
                 </li>
-                <li className="uk-visible@l">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     to="/about"
@@ -95,7 +95,7 @@ const Navbar = ({
                     {navbarAbout}
                   </Link>
                 </li>
-                <li className="uk-visible@l">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     to="/about"
@@ -105,7 +105,7 @@ const Navbar = ({
                     {navbarAirSolution}
                   </Link>
                 </li>
-                <li className="uk-visible@l">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     to="/about"
@@ -115,7 +115,7 @@ const Navbar = ({
                     {navbarLandSolution}
                   </Link>
                 </li>
-                <li className="uk-visible@l">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     to="/about"
@@ -125,7 +125,7 @@ const Navbar = ({
                     {navbarSpillSolution}
                   </Link>
                 </li>
-                <li className="uk-visible@l">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     to="/#products"
@@ -156,7 +156,7 @@ const Navbar = ({
                   </div>
                 </li>
 
-                <li className="uk-visible@l">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     href="#"
@@ -166,7 +166,7 @@ const Navbar = ({
                   </Link>
                 </li>
 
-                <li className="uk-visible@l">
+                <li className="uk-visible@m">
                   <Link
                     className="navbar-font"
                     href="#"
@@ -198,7 +198,7 @@ const Navbar = ({
                 {/* Sidebar Offcanvas */}
                 <li>
                   <a
-                    className="hamburger-button uk-button uk-button-default uk-margin-small-right uk-hidden@l"
+                    className="hamburger-button uk-button uk-button-default uk-margin-small-right uk-hidden@m"
                     type="button"
                     data-uk-toggle="target: #offcanvas-usage"
                   >
