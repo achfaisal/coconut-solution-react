@@ -252,6 +252,14 @@ const Navbar = ({
                             {navbarProduct}
                           </Link>
                           <ul className="uk-nav-sub">
+                            <li>
+                              <Link to="/products/cocofiber">Coco Fiber</Link>
+                            </li>
+                            <li>
+                              <Link>Coming Soon</Link>
+                            </li>
+                          </ul>
+                          {/* <ul className="uk-nav-sub">
                             {products().map((product) => (
                               <li key={product.id}>
                                 <Link
@@ -267,7 +275,7 @@ const Navbar = ({
                                 </Link>
                               </li>
                             ))}
-                          </ul>
+                          </ul> */}
                         </li>
                         <li>
                           <a href="#" data-uk-scroll>
