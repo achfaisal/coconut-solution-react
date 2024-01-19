@@ -86,6 +86,9 @@ h3 {
   .about-us__text {
     margin-left: 0px;
   }
+  .custom-nav {
+    gap: 15px !important;
+  }
 }
 
 @media (min-width: 960px) {
@@ -106,7 +109,7 @@ h3 {
     border-radius: 10px 10px 0 0;
   }
   .custom-nav {
-    gap: 10px;
+    gap: 20px;
   }
 }
 

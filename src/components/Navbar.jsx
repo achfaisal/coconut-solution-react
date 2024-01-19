@@ -170,9 +170,10 @@ const Navbar = ({
 
                 <li className="uk-visible@s">
                   <Link
+                    to="/#footer"
                     className="navbar-font"
                     href="#"
-                    data-uk-scroll="offset: 80"
+                    scroll={(el) => scrollWithOffset(el, 0)}
                   >
                     {navbarContact}
                   </Link>

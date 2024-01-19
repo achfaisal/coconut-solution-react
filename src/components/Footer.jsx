@@ -5,14 +5,20 @@ import { HashLink as Link } from "react-router-hash-link";
 const Footer = () => {
   return (
     <div className="footer-container">
-      <div id="about" className="uk-container">
+      <div id="footer" className="uk-container">
         <div
           className="uk-child-width-1-2@s uk-child-width-1-3@m uk-margin-medium-top"
           data-uk-grid
         >
           <div>
             <div className="uk-margin-bottom footer-company__name">
-              <img src="/img/white-logo.png" alt="" width="100px" />
+              <img
+                className="uk-margin-right"
+                src="/img/white-logo.png"
+                alt=""
+                width="100px"
+              />
+              <img src="/img/white-ikn-logo.png" alt="" width="100px" />
               <h1>PT. Indo Kelapa Nusantara</h1>
             </div>
             <h1>Address</h1>

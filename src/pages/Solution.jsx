@@ -1,11 +1,33 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import navbarData from "../lang/navbarData";
+import i18n from "../i18n";
+import { useTranslation } from "react-i18next";
 
 const Solution = () => {
-  console.log("ini clg solution");
+  const getNavData = () => {
+    const currentLanguage = i18n.language;
+    return navbarData.find((lang) => lang.language === currentLanguage);
+  };
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
+  useTranslation();
+
   return (
     <>
-      <Navbar />
+      <Navbar
+        navbarHome={getNavData().home}
+        navbarAbout={getNavData().about}
+        navbarAirSolution={getNavData().airSolution}
+        navbarLandSolution={getNavData().landSolution}
+        navbarSpillSolution={getNavData().spillSolution}
+        navbarProduct={getNavData().product}
+        navbarContact={getNavData().contact}
+        onClickHandler={changeLanguage}
+      />
       <section>
         <div className="uk-container">
           <div className="uk-text-center">
