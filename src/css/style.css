@@ -3,6 +3,10 @@
   transition: 0.3s ease;
 }
 
+.custom-nav {
+  gap: 30px;
+}
+
 .navbar-font {
   text-transform: capitalize !important;
   color: rgb(0, 0, 0) !important;
@@ -100,6 +104,9 @@ h3 {
 @media (max-width: 960px) {
   .about-image {
     border-radius: 10px 10px 0 0;
+  }
+  .custom-nav {
+    gap: 10px;
   }
 }
 
@@ -231,7 +238,7 @@ h3 {
 /* Style for the image */
 .image-container img {
   width: 100%; /* Ensure the image takes the full width of its container */
-  height: 350px; /* Maintain the aspect ratio */
+  height: 200px; /* Maintain the aspect ratio */
   object-fit: cover;
 }
 
@@ -308,8 +315,6 @@ h3 {
 
 .container-video {
   position: relative;
-  width: 100%;
-  max-width: 100%;
 }
 
 .container-video video {
@@ -317,13 +322,9 @@ h3 {
   /* margin-top: -80px; */
 }
 
-/* body {
-  margin-top: -80px;
-} */
-
 .video {
-  height: 100vh;
   width: 100vw;
+  max-height: 95vh;
   object-fit: cover;
 }
 
@@ -351,4 +352,8 @@ h3 {
 .icon-container p,
 .icon-container img {
   transition: color 0.3s, filter 0.3s; /* Add a smooth transition effect */
+}
+
+.test-height {
+  height: 1000px;
 }

@@ -40,8 +40,6 @@ const Product = () => {
     return <div>Product not found</div>;
   }
 
-  console.log(productName);
-
   const paragraphs = selectedProduct.extendedProductDetail
     .split("\n")
     .map((paragraph, index) => (

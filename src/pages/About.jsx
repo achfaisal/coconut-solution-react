@@ -3,8 +3,10 @@ import Navbar from "../components/Navbar";
 import i18n from "../i18n";
 import navbarData from "../lang/navbarData";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 
 const About = () => {
+  const { myParam } = useParams();
   const getNavData = () => {
     const currentLanguage = i18n.language;
     return navbarData.find((lang) => lang.language === currentLanguage);
@@ -33,7 +35,8 @@ const About = () => {
 
         <div className="uk-container about-text__container">
           <h1 className="uk-text-center">TENTANG KAMI</h1>
-          <div className="uk-child-width-1-1 uk-child-width-1-2@s" data-uk-grid>
+          {/* <div className="uk-child-width-1-1 uk-child-width-1-2@s" data-uk-grid>
+            <p>Parameter from URL: {myParam}</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Distinctio sequi pariatur veniam, mollitia voluptatibus earum
@@ -43,16 +46,15 @@ const About = () => {
               placeat ducimus officiis, earum vitae eum distinctio libero in
               laboriosam eligendi!
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio sequi pariatur veniam, mollitia voluptatibus earum
-              modi! Ipsa cupiditate, eveniet minima optio modi repellendus sunt?
-              Consequatur ipsam dolores excepturi labore voluptatum alias fugiat
-              consectetur voluptate officia laudantium quo delectus, minima
-              placeat ducimus officiis, earum vitae eum distinctio libero in
-              laboriosam eligendi!
-            </p>
-          </div>
+          </div> */}
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            sequi pariatur veniam, mollitia voluptatibus earum modi! Ipsa
+            cupiditate, eveniet minima optio modi repellendus sunt? Consequatur
+            ipsam dolores excepturi labore voluptatum alias fugiat consectetur
+            voluptate officia laudantium quo delectus, minima placeat ducimus
+            officiis, earum vitae eum distinctio libero in laboriosam eligendi!
+          </p>
         </div>
       </div>
     </>

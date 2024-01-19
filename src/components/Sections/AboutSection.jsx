@@ -22,10 +22,6 @@ const AboutSection = ({ aboutHeader, aboutDesc }) => {
               {aboutHeader}
             </h3>
             <p>{aboutDesc}</p>
-            {/* <button
-              className="uk-button uk-button-default about-button"
-              disabled
-            >Read More</button> */}
           </div>
         </div>
       </div>

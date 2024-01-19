@@ -80,12 +80,12 @@ const Navbar = ({
 
             <div className="uk-navbar-right">
               <ul className="uk-navbar-nav custom-nav">
-                <li className="uk-visible@m">
+                <li className="uk-visible@s">
                   <Link className="navbar-font" to="/" onClick={scrollToTop}>
                     {navbarHome}
                   </Link>
                 </li>
-                <li className="uk-visible@m">
+                <li className="uk-visible@s">
                   <Link
                     className="navbar-font"
                     to="/about"
@@ -95,37 +95,49 @@ const Navbar = ({
                     {navbarAbout}
                   </Link>
                 </li>
-                <li className="uk-visible@m">
+                <li className="uk-visible@s">
                   <Link
                     className="navbar-font"
-                    to="/about"
-                    scroll={(el) => scrollWithOffset(el, 120)}
-                    onClick={scrollToTop}
+                    to="/solution"
+                    scroll={(el) => scrollWithOffset(el, 80)}
                   >
-                    {navbarAirSolution}
+                    Solution
+                    <span data-uk-icon="icon: chevron-down"></span>
                   </Link>
-                </li>
-                <li className="uk-visible@m">
-                  <Link
-                    className="navbar-font"
-                    to="/about"
-                    scroll={(el) => scrollWithOffset(el, 120)}
-                    onClick={scrollToTop}
+                  <div
+                    id="dropdown"
+                    className="custom-card custom-dropdown"
+                    data-uk-dropdown="offset:0"
                   >
-                    {navbarLandSolution}
-                  </Link>
+                    <ul className="uk-nav uk-navbar-dropdown-nav">
+                      <li>
+                        <Link
+                          scroll={(el) => scrollWithOffset(el, 120)}
+                          to="/solution#airsolution"
+                        >
+                          Air Solution
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          scroll={(el) => scrollWithOffset(el, 120)}
+                          to="/solution#landsolution"
+                        >
+                          Land Solution
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          scroll={(el) => scrollWithOffset(el, 120)}
+                          to="/solution#spillsolution"
+                        >
+                          Spill Solution
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li className="uk-visible@m">
-                  <Link
-                    className="navbar-font"
-                    to="/about"
-                    scroll={(el) => scrollWithOffset(el, 120)}
-                    onClick={scrollToTop}
-                  >
-                    {navbarSpillSolution}
-                  </Link>
-                </li>
-                <li className="uk-visible@m">
+                <li className="uk-visible@s">
                   <Link
                     className="navbar-font"
                     to="/#products"
@@ -156,7 +168,7 @@ const Navbar = ({
                   </div>
                 </li>
 
-                <li className="uk-visible@m">
+                <li className="uk-visible@s">
                   <Link
                     className="navbar-font"
                     href="#"
@@ -166,7 +178,7 @@ const Navbar = ({
                   </Link>
                 </li>
 
-                <li className="uk-visible@m">
+                <li className="uk-visible@s">
                   <Link
                     className="navbar-font"
                     href="#"
@@ -198,7 +210,7 @@ const Navbar = ({
                 {/* Sidebar Offcanvas */}
                 <li>
                   <a
-                    className="hamburger-button uk-button uk-button-default uk-margin-small-right uk-hidden@m"
+                    className="hamburger-button uk-button uk-button-default uk-margin-small-right uk-hidden@s"
                     type="button"
                     data-uk-toggle="target: #offcanvas-usage"
                   >
@@ -252,30 +264,21 @@ const Navbar = ({
                             {navbarProduct}
                           </Link>
                           <ul className="uk-nav-sub">
-                            <li>
-                              <Link to="/products/cocofiber">Coco Fiber</Link>
-                            </li>
-                            <li>
-                              <Link>Coming Soon</Link>
-                            </li>
-                          </ul>
-                          {/* <ul className="uk-nav-sub">
                             {products().map((product) => (
                               <li key={product.id}>
                                 <Link
                                   to={`/products/${product.productName
                                     .replace(/\s/g, "")
                                     .toLowerCase()}`}
-                                  onClick={() => {
-                                    scrollToTop();
-                                    handleProductLinkClick();
-                                  }}
+                                  onClick={
+                                    (scrollToTop, handleProductLinkClick)
+                                  }
                                 >
                                   {product.productName}
                                 </Link>
                               </li>
                             ))}
-                          </ul> */}
+                          </ul>
                         </li>
                         <li>
                           <a href="#" data-uk-scroll>
@@ -286,12 +289,22 @@ const Navbar = ({
                           Language
                           <ul className="uk-nav-sub">
                             <li>
-                              <Link onClick={() => onClickHandler("en")}>
+                              <Link
+                                onClick={() => {
+                                  onClickHandler("en");
+                                  handleProductLinkClick();
+                                }}
+                              >
                                 English
                               </Link>
                             </li>
                             <li>
-                              <Link onClick={() => onClickHandler("id")}>
+                              <Link
+                                onClick={() => {
+                                  onClickHandler("id");
+                                  handleProductLinkClick();
+                                }}
+                              >
                                 Bahasa Indonesia
                               </Link>
                             </li>
