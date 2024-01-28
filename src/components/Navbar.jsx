@@ -99,14 +99,15 @@ const Navbar = ({
                   <Link
                     className="navbar-font"
                     to="/solution"
-                    scroll={(el) => scrollWithOffset(el, 80)}
+                    // scroll={(el) => scrollWithOffset(el, 80)}
+                    onClick={scrollToTop}
                   >
                     Solution
                     <span data-uk-icon="icon: chevron-down"></span>
                   </Link>
                   <div
                     id="dropdown"
-                    className="custom-card custom-dropdown"
+                    className="navbar-dropdown"
                     data-uk-dropdown="offset:0"
                   >
                     <ul className="uk-nav uk-navbar-dropdown-nav">
@@ -148,7 +149,7 @@ const Navbar = ({
                   </Link>
                   <div
                     id="dropdown"
-                    className="custom-card custom-dropdown"
+                    className="navbar-dropdown"
                     data-uk-dropdown="offset:0"
                   >
                     <ul className="uk-nav uk-navbar-dropdown-nav">
@@ -190,7 +191,7 @@ const Navbar = ({
                   </Link>
                   <div
                     id="dropdown"
-                    className="custom-card custom-dropdown"
+                    className="navbar-dropdown"
                     data-uk-dropdown="offset:0"
                   >
                     <ul className="uk-nav uk-navbar-dropdown-nav">

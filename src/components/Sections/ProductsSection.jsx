@@ -8,7 +8,7 @@ const ProductsSection = ({ cards, productHeader, productDesc, onClick }) => {
       <div className="uk-container product-cards__container">
         <div className="uk-text-center">
           <h1 className="product-section__header">{productHeader}</h1>
-          <p>{productDesc}</p>
+          <p className="product-section__body">{productDesc}</p>
         </div>
         <div
           className="uk-child-width-1-2@s uk-child-width-1-3@m products-cards"

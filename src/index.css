@@ -129,14 +129,10 @@ h1 {
   font-family: "Rethink Sans", sans-serif;
 }
 
-.card-border {
-  border-radius: 10px;
-}
-
-.border-radius__left {
-  border-top-left-radius: 10px; /* Adjust the radius as needed */
-  border-bottom-left-radius: 10px; /* Adjust the radius as needed */
-}
+/* .border-radius__left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+} */
 
 .remove-text__decoration:hover {
   text-decoration: none;

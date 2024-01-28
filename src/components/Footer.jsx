@@ -12,12 +12,6 @@ const Footer = () => {
         >
           <div>
             <div className="uk-margin-bottom footer-company__name">
-              <img
-                className="uk-margin-right"
-                src="/img/white-logo.png"
-                alt=""
-                width="100px"
-              />
               <img src="/img/white-ikn-logo.png" alt="" width="100px" />
               <h1>PT. Indo Kelapa Nusantara</h1>
             </div>
@@ -37,7 +31,7 @@ const Footer = () => {
                 <p>Whatsapp</p>
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/coconutsolution.id/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon-container"

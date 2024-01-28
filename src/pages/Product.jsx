@@ -85,7 +85,7 @@ const Product = () => {
 
       <div className="image-container">
         <img src={selectedProduct.headerImageUrl} alt="Your Image" />
-        <div className="center-text">{selectedProduct.productName}</div>
+        <div className="product-title">{selectedProduct.productName}</div>
       </div>
 
       <section className="uk-container product-order uk-margin-bottom">

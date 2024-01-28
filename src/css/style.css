@@ -7,6 +7,10 @@
   gap: 30px;
 }
 
+.navbar-dropdown {
+  border-radius: 7px;
+}
+
 .navbar-font {
   text-transform: capitalize !important;
   color: rgb(0, 0, 0) !important;
@@ -54,60 +58,112 @@ h3 {
   padding-block: 30px;
 }
 
-.right-about {
-  padding-left: 30px;
-  line-height: 1.4;
+.container-video video {
+  filter: brightness(85%);
 }
 
-.about-button {
-  margin-top: 10px;
-  text-transform: capitalize;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
+.video {
+  width: 100vw;
+  max-height: 95vh;
+  object-fit: cover;
 }
 
-.about-button:hover {
-  color: white;
+.landing-image__container__top {
+  display: block !important;
   background-color: #1c5db8;
+  border-radius: 10px 0 0 10px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: -15px;
 }
 
-.about-section__header {
-  font-weight: 500;
-}
-
-.about-section__container {
+.landing-image__top {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
   border-radius: 10px;
+}
+
+.landing-image__container__bottom {
+  display: flex;
+}
+
+@media (max-width: 639px) {
+  .landing-image__container__top {
+    margin-left: 15px;
+    margin-right: 0px;
+    min-width: 100%;
+    border-radius: 0;
+  }
+
+  .landing-container__bottom {
+    min-width: 100%;
+    margin-left: 15px !important;
+    border-radius: 0 !important;
+  }
+  .about-bottom {
+    margin-top: -1px !important;
+  }
+}
+
+.landing-container__bottom {
+  margin-bottom: 20px;
+  margin-left: 25px;
+  padding: 10px;
+  background-color: #1c5db8;
+  border-radius: 0 10px 10px 0;
+}
+
+.landing-image__bottom {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 15px;
+}
+.about-text {
+  margin: 20px;
+  align-self: center;
+  line-height: 1.5;
+}
+
+.about-section .uk-card {
+  border-radius: 15px;
+}
+
+.landing-text__left {
+  width: 200px;
+  padding-top: 10px;
+  padding-left: 20px;
+  color: white;
+  align-self: center;
+  font-weight: 600;
+}
+
+.landing-main__container {
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.landing-header {
+  font-size: 30px !important;
+  font-weight: 700;
+  color: #1c5db8;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 639px) {
+  .landing-container__bottom {
+    margin-left: 15px !important;
+  }
 }
 
 @media (max-width: 768px) {
-  .about-us__content {
-    flex-direction: column;
-  }
-  .about-us__text {
-    margin-left: 0px;
-  }
   .custom-nav {
     gap: 15px !important;
   }
 }
 
-@media (min-width: 960px) {
-  .left-about {
-    flex: 3;
-  }
-
-  .right-about {
-    flex: 7;
-  }
-  .about-image {
-    border-radius: 10px 0 0 10px;
-  }
-}
-
 @media (max-width: 960px) {
-  .about-image {
-    border-radius: 10px 10px 0 0;
-  }
   .custom-nav {
     gap: 20px;
   }
@@ -122,6 +178,10 @@ h3 {
   border-radius: 7px;
 }
 
+.card-border {
+  border-radius: 10px;
+}
+
 .products-cards {
   margin-top: 15px;
 }
@@ -131,14 +191,34 @@ h3 {
 }
 
 .card-products {
-  padding-top: 15px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-bottom: 0;
+  padding: 15px 10px 0px 10px;
 }
 
 .product-section__header {
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1c5db8;
+}
+
+.product-section__body {
+  font-size: 20px;
+}
+
+.product-cards__height {
+  height: 205px;
+}
+
+.product-text {
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.title-margin {
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -158,177 +238,13 @@ h3 {
 }
 
 .copyright-footer {
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
 }
 
 .footer-company__name h1 {
   padding-top: 10px;
   padding-bottom: 0;
-}
-
-/* About Page */
-.about-main__container {
-  background-color: rgb(224, 224, 224);
-}
-
-.about-image__container {
-  background-color: #1c5db8;
-  height: 40vh;
-  background: url("/img/kelapa-1.jpg") center/cover no-repeat;
-  background-attachment: fixed;
-  margin-bottom: 30px;
-}
-
-.product-image__container {
-  background-color: #1c5db8;
-  height: 20vh;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.product-image__container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.about-text__container {
-  height: 1000px;
-}
-
-.about-text__container h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.about-text__container p {
-  line-height: 1.5;
-}
-
-/* Products Page */
-.uk-breadcrumb {
-  margin-bottom: 20px;
-}
-
-.spec-title {
-  margin-bottom: 15px;
-}
-
-.uk-list li {
-  line-height: 1.4;
-}
-
-.product-desc {
-  padding-bottom: 0;
-  padding-top: 20px;
-  line-height: 1.4;
-}
-.product-desc p {
-  padding-bottom: 0;
-}
-
-.image-container {
-  position: relative;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Style for the image */
-.image-container img {
-  width: 100%; /* Ensure the image takes the full width of its container */
-  height: 200px; /* Maintain the aspect ratio */
-  object-fit: cover;
-}
-
-/* Style for the text */
-.center-text {
-  position: absolute;
-  top: 50%; /* Center the text vertically */
-  left: 50%; /* Center the text horizontally */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Center the text both horizontally and vertically */
-  color: white; /* Change the text color */
-  font-size: 24px; /* Adjust the font size */
-  font-weight: bold; /* Adjust the font weight */
-}
-
-.product-cards__height {
-  height: 205px;
-}
-
-.product-text {
-  padding: 0;
-}
-
-.gallery-images {
-  margin-right: 15px;
-}
-
-.gallery-border {
-  border-radius: 10px;
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-}
-
-.gallery-border:hover {
-  filter: brightness(0.7);
-}
-
-.gallery-container {
-  padding-block: 20px;
-}
-
-/* TEST */
-
-.uk-table td {
-  line-height: 1.4;
-}
-
-.table-product {
-  background-color: #1c5db8;
-  padding: 20px;
-  color: white;
-  border-radius: 10px;
-}
-
-.table-spec {
-  color: white !important;
-  text-transform: capitalize !important;
-  font-weight: 600 !important;
-  font-size: 20px !important;
-}
-
-.text-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  text-align: center;
-  color: #fff; /* Set the text color */
-}
-
-.container-video {
-  position: relative;
-}
-
-.container-video video {
-  filter: brightness(75%);
-  /* margin-top: -80px; */
-}
-
-.video {
-  width: 100vw;
-  max-height: 95vh;
-  object-fit: cover;
 }
 
 .icon-container {
@@ -357,6 +273,289 @@ h3 {
   transition: color 0.3s, filter 0.3s; /* Add a smooth transition effect */
 }
 
-.test-height {
-  height: 1000px;
+/* About Page */
+
+.about-image__container {
+  height: 30vh;
+  background: url("/img/kelapa-1.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 30px;
+}
+
+.about-text__container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-text__container p {
+  line-height: 1.5;
+}
+
+.about-gallery {
+  border-radius: 10px;
+}
+
+.about-gallery__container {
+  margin-bottom: 20px !important;
+}
+
+/* About Page End*/
+
+/* Products Page */
+.uk-breadcrumb {
+  margin-bottom: 20px;
+}
+
+.product-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.uk-table td {
+  line-height: 1.4;
+}
+
+.table-product {
+  background-color: #1c5db8;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+.table-spec {
+  color: white !important;
+  text-transform: capitalize !important;
+  font-weight: 600 !important;
+  font-size: 20px !important;
+}
+
+.product-desc {
+  padding-bottom: 0;
+  padding-top: 20px;
+  line-height: 1.4;
+}
+.product-desc p {
+  padding-bottom: 0;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-images {
+  margin-right: 15px;
+}
+
+.gallery-border {
+  border-radius: 10px;
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.gallery-border:hover {
+  filter: brightness(0.7);
+}
+
+.gallery-container {
+  padding-block: 20px;
+}
+
+/* Add this CSS to your existing stylesheet */
+.solution-right {
+  line-height: 1.3;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: #1c5db8;
+  color: white;
+  border-radius: 10px;
+}
+
+.solution-right h1 {
+  color: white;
+}
+
+.solution-right__container {
+  align-self: center;
+}
+
+.solution-left {
+  align-self: center;
+}
+
+.image-solution {
+  min-height: 400px;
+}
+
+@media (max-width: 960px) {
+  .solution-right {
+    font-size: 13px;
+  }
+}
+
+.air-solution__first__container {
+  margin-bottom: 20px !important;
+}
+
+.air-solution__bottom {
+  background-color: #1c5db8;
+}
+
+.title-solution {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  display: inline-flex;
+  padding: 15px;
+  border-radius: 10px;
+  color: #1c5db8;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.air-solution__img {
+  padding-bottom: 30px;
+}
+
+.land-solution__bottom__container {
+  display: flex;
+}
+
+.land-solution__bottom__image {
+  width: 200px;
+}
+
+.solution-text {
+  line-height: 1.3;
+}
+
+.solution-header {
+  display: inline-flex;
+  background-color: #1c5db8;
+  color: white;
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.solution-right h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.all-solution__container {
+  background: url("/img/banner/coco4.jpg");
+  padding: 20px;
+  height: 50vh;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+@media (max-width: 639px) {
+  .all-solution__container {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.all-solution__background {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  line-height: 1.3;
+}
+
+.all-solution__header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.all-solution__card__title {
+  font-weight: 550;
+  color: #1c5db8;
+}
+
+.solution-grid__container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  line-height: 1.3;
+}
+
+.solution-grid__card .uk-card:hover {
+  background-color: rgba(255, 255, 255, 0.322);
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+
+.vertical-divider {
+  height: 100%;
+  width: 1px;
+  background-color: black !important;
+}
+
+.solution-grid__card::before {
+  border-left: 1px solid rgba(187, 186, 186, 0.63) !important;
+}
+
+.uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
+  border-top: 1px solid rgba(187, 186, 186, 0.63);
+}
+
+.all-solution__text {
+  color: rgb(138, 138, 138);
+}
+
+.solution-grid__card .uk-card-body {
+  padding: 20px;
+}
+
+.land-solution__container {
+  background-color: #1c5db8;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px !important;
+  border-radius: 10px;
+  color: white;
+}
+
+.land-solution__bottom {
+  align-self: center;
+}
+
+.land-solution__bottom h2 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.air-solution__top {
+  margin: 7px 0 7px 0;
+}
+
+.solution-headline {
+  font-weight: 550;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
