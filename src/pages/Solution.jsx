@@ -104,10 +104,10 @@ const Solution = () => {
                 >
                   <div className="uk-card uk-card-body">
                     <h3 className="uk-card-title all-solution__card__title">
-                      Air Solution
+                      {getSolutionData()[0].solutionName}
                     </h3>
                     <p className="all-solution__text">
-                      Solusi untuk masalah polusi udara.
+                      {getSolutionData()[0].solutionDesc}
                     </p>
                   </div>
                 </Link>
@@ -120,10 +120,10 @@ const Solution = () => {
                 >
                   <div className="uk-card uk-card-body">
                     <h3 className="uk-card-title all-solution__card__title">
-                      Land Solution
+                      {getSolutionData()[1].solutionName}
                     </h3>
                     <p className="all-solution__text">
-                      Solusi untuk masalah polusi tanah.
+                      {getSolutionData()[1].solutionDesc}
                     </p>
                   </div>
                 </Link>
@@ -139,7 +139,7 @@ const Solution = () => {
                       Spill Solution
                     </h3>
                     <p className="all-solution__text">
-                      Solusi untuk masalah polusi industri.
+                      {getSolutionData()[2].solutionDesc}
                     </p>
                   </div>
                 </Link>
@@ -149,7 +149,7 @@ const Solution = () => {
         </div>
       </div>
       <AirSolution solutionName={getSolutionData()} imageData={imageUrl} />
-      <LandSolution />
+      <LandSolution solutionName={getSolutionData()} />
       <Footer />
     </>
   );

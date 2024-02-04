@@ -1,6 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
-const AboutSection = () => {
+const AboutSection = ({
+  aboutDescTop,
+  aboutDescBottom,
+  descBottomOne,
+  descBottomTwo,
+  descBottomThree,
+}) => {
   return (
     <section id="about" className="about-section">
       <div className="uk-container">
@@ -8,14 +15,7 @@ const AboutSection = () => {
           <div className="uk-child-width-expand@s" data-uk-grid>
             <div className="about-text">
               <h1 className="uk-text-left landing-header">Coconut Solution</h1>
-              <p className="uk-text-left">
-                Keadaan bumi saat ini sedang tidak baik - baik saja, tanah yang
-                semakin rusak karena zat kimia , polusi udara dari pembakaran
-                carbon ataupun gas metana , yang akhirnya menimbulkan air bersih
-                menjadi susah , hal tersebut adalah beberapa alasan kami untuk
-                berinovasi untuk memperbaiki bumi dengan produk dari turunan
-                pohon kelapa.
-              </p>
+              <p className="uk-text-left">{aboutDescTop}</p>
             </div>
 
             <div className="landing-image__container__top uk-text-center">
@@ -64,16 +64,11 @@ const AboutSection = () => {
             </div>
 
             <div className="about-text">
-              <p className="uk-text-left">
-                Semenjak tahun 2018 kami berusaha untuk mengembangkan produk
-                yang ramah lingkungan dan dapat bermanfaat untuk memperbaiki
-                keadaan lingkungan. Sampai dengan saat ini beberapa solusi yang
-                kami dapatkan :
-              </p>
+              <p className="uk-text-left">{aboutDescBottom}</p>
               <ul className="uk-list uk-list-disc uk-list-primary">
-                <li>Solusi pencemaran udara</li>
-                <li>Solusi pencemaran tanah</li>
-                <li>Solusi tumpahan cairan</li>
+                <li>{descBottomOne}</li>
+                <li>{descBottomTwo}</li>
+                <li>{descBottomThree}</li>
               </ul>
             </div>
           </div>

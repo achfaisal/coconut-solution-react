@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 const AirSolution = ({ solutionName, imageData }) => {
@@ -21,33 +22,14 @@ const AirSolution = ({ solutionName, imageData }) => {
           </div>
           <div className="solution-right__container">
             <div className="solution-right">
-              <div className="air-solution__top">
-                <h1>Gas Metan</h1>
-                <p>
-                  Berdasarkan data KLHK tahun 2022, timbulan sampah di Indonesia
-                  didominasi oleh sampah organik, khususnya sisa
-                  makanan.tumpukan sampah organik tersebut mengeluarkan gas
-                  rumah kaca dalam jumlah sangat besar.
-                </p>
-              </div>
-              <div className="air-solution__top">
-                <h1>Kurangnya Lahan Hijau</h1>
-                <p>
-                  Dampak buruk kurangnya penghijauan di kota yang pertama adalah
-                  menyebabkan pencemaran udara meningkat. Jalanan di kota akan
-                  dipenuhi dengan asap sehingga kadar karbondioksida menjadi
-                  sangat tinggi
-                </p>
-              </div>
-              <div className="air-solution__top">
-                <h1>Asap Kendaraan</h1>
-                <p>
-                  Polusi kendaraan bermotor bisa memicu terjadinya gangguan
-                  pernapasan, seperti asma, ISPA, dan kanker paru-paru. Selain
-                  itu, juga bisa berakhir pada berkurangnya kadar oksigen di
-                  dalam tubuh manusia, sehingga membahayakan kesehatan.
-                </p>
-              </div>
+              {solutionName[0].solutionPoint.map((title, index) => (
+                <div key={index}>
+                  <div className="air-solution__top">
+                    <h1>{title}</h1>
+                    <p>{solutionName[0].solutionDescription[index]}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

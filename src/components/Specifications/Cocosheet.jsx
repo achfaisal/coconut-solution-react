@@ -20,17 +20,17 @@ const Cocosheet = () => {
 
   const cocoSheetEn = [
     {
-      title: "Specification",
-      header1: "Bahan",
-      desc1: "Campuran sabut kelapa",
-      header2: "Ketebalan",
-      desc2: "1-3 cm atau lebih",
-      header3: "Panjang",
-      desc3: "25 - 50 meter",
-      header4: "Lebar",
-      desc4: "25 meter",
-      header5: "Warna",
-      desc5: "Emas kecoklatan",
+      title: "Specifications",
+      header1: "Material",
+      desc1: "Mixture of coconut fiber",
+      header2: "Thickness",
+      desc2: "1-3 cm or more",
+      header3: "Length",
+      desc3: "25 - 50 meters",
+      header4: "Width",
+      desc4: "25 meters",
+      header5: "Color",
+      desc5: "Golden brown",
     },
   ];
 

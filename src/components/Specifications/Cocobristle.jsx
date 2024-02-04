@@ -13,8 +13,8 @@ const Cocobristle = () => {
   const cocoBristleEn = [
     {
       title: "Specification",
-      desc1: "Alami",
-      desc2: "Memiliki panjang  15 – 25 cm",
+      desc1: "Natural",
+      desc2: "Having a length of 15 – 25 cm.",
     },
   ];
 

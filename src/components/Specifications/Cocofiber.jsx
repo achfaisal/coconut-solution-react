@@ -19,14 +19,12 @@ const Cocofiber = () => {
   const cocoFiberEn = [
     {
       title: "Specification",
-      desc1: "Memiliki panjang serat minimal 5 cm",
-      desc2: "Memiliki kadar air kurang dari 15%",
-      desc3:
-        "Memiliki kepadatan yang baik dan tidak terlalu padat atau terlalu renggang.",
-      desc4: "Memiliki kotor ± 5%.",
-      desc5:
-        "Memiliki kepadatan yang baik dan tidak terlalu padat atau terlalu renggang.",
-      desc6: "Mempunyai tingkat pH antara 5,5 hingga 6,5.",
+      desc1: "Minimum fiber length of 5 cm.",
+      desc2: "Moisture content of less than 15%.",
+      desc3: "Good density, not too compact or too loose.",
+      desc4: "± 5% impurity level.",
+      desc5: "Good density, not too compact or too loose.",
+      desc6: "pH level ranging from 5.5 to 6.5.",
     },
   ];
 

@@ -2,7 +2,6 @@ import React from "react";
 import CardProducts from "../Cards/CardProducts";
 
 const ProductsSection = ({ cards, productHeader, productDesc, onClick }) => {
-  console.log("Ini cards :", cards);
   return (
     <section id="products">
       <div className="uk-container product-cards__container">

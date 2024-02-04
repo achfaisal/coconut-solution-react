@@ -62,7 +62,11 @@ const Home = () => {
       <AboutSection
         cards={getAboutData()}
         aboutHeader={getHomeData()[0].aboutHeader}
-        aboutDesc={getHomeData()[0].aboutDesc}
+        aboutDescTop={getHomeData()[0].aboutDescTop}
+        aboutDescBottom={getHomeData()[0].aboutDescBottom}
+        descBottomOne={getHomeData()[0].descBottomOne}
+        descBottomTwo={getHomeData()[0].descBottomTwo}
+        descBottomThree={getHomeData()[0].descBottomThree}
       />
       <ProductsSection
         cards={getProductData()}

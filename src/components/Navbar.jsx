@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { productEn, productId } from "../lang/productData";
@@ -48,6 +49,7 @@ const Navbar = ({
   };
 
   const handleProductLinkClick = () => {
+    // eslint-disable-next-line no-undef
     const offcanvas = UIkit.offcanvas("#offcanvas-usage");
     if (offcanvas.isActive()) {
       offcanvas.hide();
@@ -59,7 +61,6 @@ const Navbar = ({
     return currentLanguage === "en" ? productEn : productId;
   };
 
-  console.log(products());
   useTranslation();
 
   return (
@@ -186,7 +187,17 @@ const Navbar = ({
                     href="#"
                     data-uk-scroll="offset: 80"
                   >
-                    <span data-uk-icon="icon: world"></span>
+                    <span>
+                      <img
+                        className="flag"
+                        src={
+                          i18n.language === "en"
+                            ? "/img/flag/us-flag.png"
+                            : "/img/flag/indo-flag.png"
+                        }
+                        alt=""
+                      />
+                    </span>
                     <span data-uk-icon="icon: chevron-down"></span>
                   </Link>
                   <div
@@ -236,24 +247,25 @@ const Navbar = ({
                         </li>
                         <li>
                           <Link
-                            to="/#about"
+                            to="/about"
                             scroll={(el) => scrollWithOffset(el, 120)}
+                            onClick={scrollToTop}
                           >
                             {navbarAbout}
                           </Link>
                         </li>
                         <li>
                           <Link
-                            to="/about"
                             scroll={(el) => scrollWithOffset(el, 120)}
+                            to="/solution#airsolution"
                           >
                             {navbarAirSolution}
                           </Link>
                         </li>
                         <li>
                           <Link
-                            to="/about"
                             scroll={(el) => scrollWithOffset(el, 120)}
+                            to="/solution#landsolution"
                           >
                             {navbarLandSolution}
                           </Link>
@@ -297,7 +309,12 @@ const Navbar = ({
                                   handleProductLinkClick();
                                 }}
                               >
-                                English
+                                <img
+                                  className="flag"
+                                  src="/img/flag/us-flag.png"
+                                  alt=""
+                                />
+                                <span>English</span>
                               </Link>
                             </li>
                             <li>
@@ -307,7 +324,12 @@ const Navbar = ({
                                   handleProductLinkClick();
                                 }}
                               >
-                                Bahasa Indonesia
+                                <img
+                                  className="flag"
+                                  src="/img/flag/indo-flag.png"
+                                  alt=""
+                                />
+                                <span>Bahasa Indonesia</span>
                               </Link>
                             </li>
                           </ul>

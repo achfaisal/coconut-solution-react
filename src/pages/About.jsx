@@ -36,35 +36,32 @@ const About = () => {
         onClickHandler={changeLanguage}
       />
       <div className="about-main__container">
-        <div className="about-image__container"></div>
-        <div className="uk-container about-text__container">
-          <div>
-            <h1 className="uk-text-center">{getAboutData()[0].aboutTitle}</h1>
-            <p>
-              Setelah riset lebih dari 5 tahun akhirnya PT. Indo Kelapa
-              Nusantara Berdiri tahun 2023 di Bali dengan domisili Kantor di
-              Denpasar dan Pabrik di Tabanan.
-            </p>
+        <div className="image-container">
+          <img src="./img/banner/about.jpg" alt="Your Image" />
+          <div className="about-title">
+            <h1>{getAboutData()[0].aboutTitle}</h1>
           </div>
+        </div>
+        <div className="uk-container about-text__container">
+          <p className="uk-text-center">{getAboutData()[0].about}</p>
 
           <hr />
 
-          <div className="uk-child-width-1-1 uk-child-width-1-2@s" data-uk-grid>
-            <div>
-              <h1>Visi</h1>
-              <p>
-                Menjadi perusahaan ramah lingkungan berbasis kelapa di indonesia
-                dan menjadikan Indonesia menjadi sentra kelapa Dunia yang
-                terintegrasi
-              </p>
+          <div className="vision-mission__main__container">
+            <div className="vision-container">
+              <img src="./img/about/2.png" alt="" />
+              <div>
+                <h1>{getAboutData()[0].vision}</h1>
+                <p>{getAboutData()[0].visionDetail}</p>
+              </div>
             </div>
-            <div>
-              <h1>Misi</h1>
-              <p>
-                Menjadi perusahaan transnasional yang dapat membawa nama
-                indonesia ke manca negara dengan produk yang berstandar
-                internasional dari bahan baku pohon kelapa
-              </p>
+
+            <div className="mission-container">
+              <img src="./img/about/1.png" alt="" />
+              <div>
+                <h1>{getAboutData()[0].mission}</h1>
+                <p>{getAboutData()[0].missionDetail}</p>
+              </div>
             </div>
           </div>
 
@@ -79,7 +76,7 @@ const About = () => {
             data-uk-grid
           >
             <div>
-              <h1>Kantor</h1>
+              <h1>{getAboutData()[0].office}</h1>
               <div
                 className="uk-position-relative uk-visible-toggle uk-light"
                 tabIndex={-1}
@@ -90,7 +87,7 @@ const About = () => {
                     <div data-uk-lightbox>
                       <a
                         href="./img/office-factory/office1.jpg"
-                        data-caption="Caption"
+                        data-caption="Office 1"
                       >
                         <img
                           src="./img/office-factory/office1.jpg"
@@ -104,7 +101,7 @@ const About = () => {
                     <div data-uk-lightbox>
                       <a
                         href="./img/office-factory/office2.jpg"
-                        data-caption="Caption"
+                        data-caption="Office 2"
                       >
                         <img
                           src="./img/office-factory/office2.jpg"
@@ -130,7 +127,7 @@ const About = () => {
               </div>
             </div>
             <div>
-              <h1>Pabrik</h1>
+              <h1>{getAboutData()[0].factory}</h1>
               <div
                 className="uk-position-relative uk-visible-toggle uk-light"
                 tabIndex={-1}
@@ -141,7 +138,7 @@ const About = () => {
                     <div data-uk-lightbox>
                       <a
                         href="./img/office-factory/factory1.jpg"
-                        data-caption="Caption"
+                        data-caption="Factory 1"
                       >
                         <img
                           src="./img/office-factory/factory1.jpg"
@@ -155,7 +152,7 @@ const About = () => {
                     <div data-uk-lightbox>
                       <a
                         href="./img/office-factory/factory2.jpg"
-                        data-caption="Caption"
+                        data-caption="Factory 2"
                       >
                         <img
                           src="./img/office-factory/factory2.jpg"

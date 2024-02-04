@@ -22,19 +22,19 @@ const Cocomesh = () => {
 
   const cocoMeshEn = [
     {
-      title: "Specification",
-      header1: "Bahan",
-      desc1: "Serat sabut kelapa",
-      header2: "Ukuran jaring",
+      title: "Specifications",
+      header1: "Material",
+      desc1: "Coconut fiber",
+      header2: "Mesh size",
       desc2: "2x2 cm",
       desc3: "3x3 cm",
       desc4: "4x4 cm",
-      desc5: "atau sesuai permintaan",
-      header3: "Kemasan",
+      desc5: "or as requested",
+      header3: "Packaging",
       desc6: "Roll",
-      header4: "Panjang per roll",
-      desc7: "25 meter",
-      desc8: "atau sesuai dengan permintaan",
+      header4: "Length per roll",
+      desc7: "25 meters",
+      desc8: "or as per request",
     },
   ];
 
