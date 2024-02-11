@@ -59,7 +59,7 @@ const AboutSection = ({
                   src="/img/landing-image/landing-image-bottom-3.jpg"
                   alt=""
                 />
-                <p className="landing-text__left">Coir pot plant</p>
+                <p className="landing-text__left">Coco dust</p>
               </div>
             </div>
 
